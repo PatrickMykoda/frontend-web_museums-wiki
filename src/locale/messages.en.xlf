@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1926157928707021468" datatype="html">
+        <source>Inicio</source>
+        <target>Home</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="195678506445095102" datatype="html">
+        <source> Museo </source>
+        <target> Museums </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6417758864484535097" datatype="html">
+        <source>Listado</source>
+        <target>List</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7776873252561096935" datatype="html">
+        <source>Nuevo</source>
+        <target>New</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">67</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7483549457077437610" datatype="html">
+        <source> Exhibiciones </source>
+        <target> Exhibitions </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">24,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3639750633908127814" datatype="html">
+        <source>Nueva</source>
+        <target>New</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6320034351702949978" datatype="html">
+        <source> Obras </source>
+        <target> Artworks </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">35,37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8010584024125548746" datatype="html">
+        <source> Artistas </source>
+        <target> Artists </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">44,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7856567379347915247" datatype="html">
+        <source> Movimientos </source>
+        <target> Movements </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8936452601644826243" datatype="html">
+        <source> Patrocinadores </source>
+        <target> Sponsors </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">62,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6922043690334631577" datatype="html">
+        <source>Nuevo Artista</source>
+        <target>New Artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5357661269973482487" datatype="html">
+        <source>Nombre</source>
+        <target>Name</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-list/artista-list.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-detail/exhibicion-detail.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-list/exhibicion-list.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-list/movimiento-list.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-list/obra-list.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-list/sponsor-list.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="109988240335450516" datatype="html">
+        <source>Nombre del artista</source>
+        <target>Name of the artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="272776928291379645" datatype="html">
+        <source> Por favor ingrese el nombre del artista! </source>
+        <target> Please enter the name of the artist! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3059004892269661253" datatype="html">
+        <source> El nombre es demasiado corto! </source>
+        <target> The name is too short </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6588942867089720766" datatype="html">
+        <source>Año de nacimiento</source>
+        <target>Year of birth</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3201437144264805609" datatype="html">
+        <source> Año de nacimiento requerido </source>
+        <target> Year of birth is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5272499330959871776" datatype="html">
+        <source>Lugar de nacimiento</source>
+        <target>Place of birth</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3776973194361817652" datatype="html">
+        <source>Lugar de nacimiento del artista</source>
+        <target>Birthplace of the artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6769998166833217432" datatype="html">
+        <source> Lugar de nacimiento requerido </source>
+        <target> Place of birth is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7937626225231657725" datatype="html">
+        <source>Imagen</source>
+        <target>Picture</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2784791058472421672" datatype="html">
+        <source>URL con imagen del artista</source>
+        <target>Url with a picture of the artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8429396061328219614" datatype="html">
+        <source> Imagen requerida </source>
+        <target> Picture is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">61,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3537661427620985266" datatype="html">
+        <source> Crear </source>
+        <target> Create </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">54,56</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">60,62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">66,68</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">75,77</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">48,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6060080757060540228" datatype="html">
+        <source> Cancelar </source>
+        <target> Cancel </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-create/artista-create.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">63,65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">69,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">69,71</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">78,80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">51,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8775736695809115913" datatype="html">
+        <source>Lugar y fecha de nacimiento:</source>
+        <target>Place and date of birth</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-detail/artista-detail.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4725323536494032167" datatype="html">
+        <source>Movimientos</source>
+        <target>Movements</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-detail/artista-detail.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-list/movimiento-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4920131437205255782" datatype="html">
+        <source>Obras</source>
+        <target>Artworks</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-detail/artista-detail.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-list/obra-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8991632347965179602" datatype="html">
+        <source>Artistas</source>
+        <target>Artists</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/artista/artista-list/artista-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="119496214304657405" datatype="html">
+        <source>Nueva exhibicion</source>
+        <target>New Exhibition</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6254457681844065626" datatype="html">
+        <source>Nombre de la exhibicion</source>
+        <target>Name of the exhibition</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3185736249077203680" datatype="html">
+        <source> Por favor ingrese el nombre de la exhibicion! </source>
+        <target> Please enter the name of the exhibition! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2702769239797460498" datatype="html">
+        <source>Descripción</source>
+        <target>Description</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-detail/exhibicion-detail.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-detail/museo-detail.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-detail/obra-detail.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4605829089679089913" datatype="html">
+        <source> Descripción requerida </source>
+        <target> Description is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8248067174704475524" datatype="html">
+        <source>Patrocinador</source>
+        <target>Sponsor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2180630415130338942" datatype="html">
+        <source> Seleccione un patrocinador </source>
+        <target> Select the sponsor </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2658701754946105488" datatype="html">
+        <source>Museo</source>
+        <target>Museum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8840007921963307380" datatype="html">
+        <source>Seleccione el museo</source>
+        <target> Select the museum </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5472673649403196248" datatype="html">
+        <source> Seleccione un museo </source>
+        <target> Select a museum </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">54,56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4268463341764354683" datatype="html">
+        <source>Exhibiciones</source>
+        <target>Exhibitions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-list/exhibicion-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-detail/museo-detail.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4838566168197627507" datatype="html">
+        <source> © 2021 Copyright: Grupo 13 Contáctenos: +57 3214329279 - al.cardona@uniandes.edu.co - p.mykoda@uniandes.edu.co - c.borras@uniandes.edu.co </source>
+        <target>© 2021 Copyright: Grupo 13 Contact us: +57 3214329279 - al.cardona@uniandes.edu.co - p.mykoda@uniandes.edu.co - c.borras@uniandes.edu.co </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/footer/footer.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4457631183841019985" datatype="html">
+        <source>Mujer observando una obra de arte.</source>
+        <target>Woman looking at artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4883774177868563890" datatype="html">
+        <source> La Aplicación para los Amantes del Arte </source>
+        <target>The Art Lovers's App</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4433038203518468935" datatype="html">
+        <source> &quot;El arte no reproduce aquello que es visible sino que hace visible aquello que no siempre lo es.&quot; Paul Klee </source>
+        <target> &quot;Art does not reproduce the visible but makes visible what not always is.&quot; Paul Klee </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8733840702231016782" datatype="html">
+        <source>Nuevo Movimiento</source>
+        <target>New Movement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2069996019151747577" datatype="html">
+        <source>Nombre del movimiento</source>
+        <target>Name of the movement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6202787247087385515" datatype="html">
+        <source> Por favor ingrese el nombre del movimiento! </source>
+        <target> Please enter the name of the movement! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4969105997839291633" datatype="html">
+        <source>País de origen</source>
+        <target>Country of origin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6752250818514990325" datatype="html">
+        <source> El nombre del país es demasiado largo </source>
+        <target> The name of the country is too long </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1076408754716018076" datatype="html">
+        <source> País de origen requerido </source>
+        <target> Country name is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1362280336659233370" datatype="html">
+        <source>Años activos</source>
+        <target>Active years</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5217614276321070232" datatype="html">
+        <source>Años activos del movimiento</source>
+        <target>Active years of the movement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3110066374557018122" datatype="html">
+        <source> Descripción de años activos es demasiado larga </source>
+        <target> Description of active years is too long </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">55,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2589995568604264067" datatype="html">
+        <source> Años activos requeridos </source>
+        <target> Active years are needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/movimiento/movimiento-create/movimiento-create.component.html</context>
+          <context context-type="linenumber">61,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4537016849811430403" datatype="html">
+        <source>Nuevo Museo</source>
+        <target>New Museum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2260472669194587396" datatype="html">
+        <source>Nombre del museo</source>
+        <target>Name of the museum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7796743416550450733" datatype="html">
+        <source> Por favor ingrese el nombre del museo! </source>
+        <target> Please enter the name of the museum! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="27938269079184046" datatype="html">
+        <source>Dirección</source>
+        <target>Address</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7391536704650470083" datatype="html">
+        <source>Dirección del museo</source>
+        <target>Address of the museum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8625612492794844840" datatype="html">
+        <source> Dirección requerida </source>
+        <target> Address is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="469730375491279314" datatype="html">
+        <source>Ciudad</source>
+        <target>City</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="488248525456631849" datatype="html">
+        <source>Ciudad donde se ubica el museo</source>
+        <target>City in which the museum is located </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3970832915481700139" datatype="html">
+        <source> Ciudad requerida </source>
+        <target> City is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">49,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4881879066880933073" datatype="html">
+        <source>URL con imagen del museo</source>
+        <target>URL with a picture of the museum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7174439936843053971" datatype="html">
+        <source>Dirección y ubicación en GoogleMaps</source>
+        <target>Address and GoogleMaps Location</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-detail/museo-detail.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5309656403056641365" datatype="html">
+        <source>Ver Exhibiciones</source>
+        <target>See Exhibitions</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-detail/museo-detail.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7391976753761499033" datatype="html">
+        <source>Nueva Obra</source>
+        <target>New Artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8653144593645404658" datatype="html">
+        <source>Nombre de la obra</source>
+        <target>Name of the artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7265509218827054650" datatype="html">
+        <source> Por favor ingrese el nombre de la obra! </source>
+        <target> Please enter the name of the artwork! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3519274153272511092" datatype="html">
+        <source>Descripción de la obra</source>
+        <target>Description of the artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7879714128195942135" datatype="html">
+        <source>Año de creación</source>
+        <target>Year of creation</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4530309519862519012" datatype="html">
+        <source>Año de creación de la obra</source>
+        <target>Year of creation of the artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7480740634731258072" datatype="html">
+        <source> Año de creación requerido </source>
+        <target>Year of creation of the artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9011585007392156649" datatype="html">
+        <source> El valor debe ser numérico! </source>
+        <target> The value has to be a number! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">40,42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2759773909798147145" datatype="html">
+        <source>Tipo</source>
+        <target>Type</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-detail/obra-detail.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8579948247804345566" datatype="html">
+        <source>Tipo de obra</source>
+        <target>Type of the artwork</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1891200086401959383" datatype="html">
+        <source>Pintura</source>
+        <target>Painting</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4238162935061250041" datatype="html">
+        <source>Escultura</source>
+        <target>Sculpture</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6426658405377591648" datatype="html">
+        <source>Objeto</source>
+        <target>Object</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3239456861598135931" datatype="html">
+        <source> Tipo requerido </source>
+        <target> Type is needed </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">56,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3132430609862081033" datatype="html">
+        <source>Artista</source>
+        <target>Artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-detail/obra-detail.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="67211933119714419" datatype="html">
+        <source>Seleccione el artista</source>
+        <target>Select the artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4854000796247530422" datatype="html">
+        <source> Seleccione un artista </source>
+        <target>Select an artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-create/obra-create.component.html</context>
+          <context context-type="linenumber">70,72</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4448379371353374337" datatype="html">
+        <source>Año</source>
+        <target>Active years</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-detail/obra-detail.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5723732427159704336" datatype="html">
+        <source>Más imágenes</source>
+        <target>More pictures</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/obra/obra-detail/obra-detail.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7908301030074103603" datatype="html">
+        <source>Nuevo Patrocinador</source>
+        <target>New Sponsor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3299909613603739627" datatype="html">
+        <source>Nombre del patrocinador</source>
+        <target>Name of the sponsor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2851652610629057200" datatype="html">
+        <source> Por favor ingrese el nombre del patrocinador! </source>
+        <target> Please enter the name of the sponsor! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">10,12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4270534977572425885" datatype="html">
+        <source>Página web del patrocinador</source>
+        <target>Website of the sponsor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="315581823139207249" datatype="html">
+        <source> Página web del patrocinador </source>
+        <target> Website of the sponsor </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4219399821193356674" datatype="html">
+        <source> Ingrese página web válida </source>
+        <target> Enter valid e-mail </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-create/sponsor-create.component.html</context>
+          <context context-type="linenumber">43,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8947156943193244007" datatype="html">
+        <source>Patrocinadores</source>
+        <target> Sponsors </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/sponsor/sponsor-list/sponsor-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+            <trans-unit id="4088005640535928145" datatype="html">
+        <source>Museos</source>
+        <target>Museums</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-list/museo-list.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4102559228462569726" datatype="html">
+        <source>Descripción del museo</source>
+        <target>Description of the museum</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/museo/museo-create/museo-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7000388664330515585" datatype="html">
+        <source>Descripción del movimiento</source>
+        <target>Description of the movement</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src\app\movimiento\movimiento-create\movimiento-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3247045452045550361" datatype="html">
+        <source>Descripción del patrocinador</source>
+        <target>Description of the sponsor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src\app\sponsor\sponsor-create\sponsor-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1750724155502350333" datatype="html">
+        <source>País de origin</source>
+        <target>Country of origin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src\app\movimiento\movimiento-detail\movimiento-detail.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="473895283840014833" datatype="html">
+        <source>Página Web</source>
+        <target>Country of origin</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src\app\sponsor\sponsor-detail\sponsor-detail.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="431445261941719032" datatype="html">
+        <source>Año de nacimiento del artista</source>
+        <target>Year of birth of the artist</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src\app\artista\artista-create\artista-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7903218546611715364" datatype="html">
+        <source>Descripción de la exhibicion</source>
+        <target>Description of the exhibition</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src\app\exhibicion\exhibicion-create\exhibicion-create.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6777827293379874257" datatype="html">
+        <source>Seleccione al sponsor</source>
+        <target> Select the sponsor </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/exhibicion/exhibicion-create/exhibicion-create.component.html</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
+
+
+
+431445261941719032

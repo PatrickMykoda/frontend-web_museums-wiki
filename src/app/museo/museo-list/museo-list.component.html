@@ -1,0 +1,32 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <table class="table table-striped" aria-describedby="museos">
+                <thead>
+                    <caption id="museos" i18n>Museos</caption>
+                    <tr>
+                        <th caption="col" id="thmuseo">#</th>
+                        <th caption="col" class="h4" id="thnombre" i18n>Nombre</th>
+                        <th caption="col" id="thciudad" i18n>Ciudad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr (click)="onSelected(museo)" *ngFor="let museo of museos; index as i">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            <dd class="museumsNames" id='{{museo.id}}'>{{museo.name}}</dd>
+                        </td>
+                        <td>
+                            <div id='{{museo.id}}'>{{museo.city}}</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <div *ngIf="selected">
+                <app-museo-detail [museoDetail]="selectedMuseo"></app-museo-detail>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h2 class="text-center" i18n>Nuevo Movimiento</h2>
+  <form [formGroup]="movimientoForm" (ngSubmit)="!movimientoForm.invalid && createMovement(movimientoForm.value)">
+      <!--Name-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="name" i18n>Nombre</label>
+          <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre del movimiento" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        movimientoForm.get('name')!.hasError('required') &&
+        movimientoForm.get('name')!.touched" i18n>
+              Por favor ingrese el nombre del movimiento!
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="movimientoForm.get('name')!.hasError('minlength')" i18n>
+              El nombre es demasiado corto!
+          </div>
+      </div>
+
+      <!--Description-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="description" i18n>Descripción</label>
+          <input novalidate id="description" class="form-control" formControlName="description" i18n-placeholder placeholder="Descripción del movimiento" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        movimientoForm.get('description')!.hasError('required') &&
+        movimientoForm.get('description')!.touched
+      " i18n>
+              Descripción requerida
+          </div>
+      </div>
+
+      <!--Country of origin-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="countryOfOrigin" i18n>País de origen</label>
+          <input novalidate id="countryOfOrigin" class="form-control" formControlName="countryOfOrigin" i18n-placeholder placeholder="País de origen" />
+          <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="movimientoForm.get('countryOfOrigin')!.hasError('maxlength')"
+          i18n>
+          El nombre del país es demasiado largo
+        </div>
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          movimientoForm.get('countryOfOrigin')!.hasError('required') &&
+          movimientoForm.get('countryOfOrigin')!.touched
+          " i18n>
+              País de origen requerido
+          </div>
+      </div>
+
+      <!--Active years-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="activeYears" i18n>Años activos</label>
+          <input novalidate id="activeYears" class="form-control" formControlName="activeYears" i18n-placeholder placeholder="Años activos del movimiento" />
+          <div
+          class="alert alert-danger alert-dismissible fade show"
+          *ngIf="movimientoForm.get('activeYears')!.hasError('maxlength')"
+          i18n>
+          Descripción de años activos es demasiado larga
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+      movimientoForm.get('activeYears')!.hasError('required') &&
+      movimientoForm.get('activeYears')!.touched
+      " i18n>
+            Años activos requeridos
+          </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!movimientoForm.valid" i18n>
+    Crear
+  </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
+    Cancelar
+  </button>
+  </form>
+</div>

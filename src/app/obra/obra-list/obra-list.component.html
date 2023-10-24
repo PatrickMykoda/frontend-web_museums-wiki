@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <table class="table table-striped" aria-describedby="obras">
+                <thead>
+                    <caption id="obras" i18n>Obras</caption>
+                    <tr>
+                        <th caption="col" id="thobra">#</th>
+                        <th caption="col" class="h4" id="thnombre" i18n>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr (click)="onSelected(obra)" *ngFor="let obra of obras; index as i">
+                        <th scope="row">{{ i + 1 }}</th>
+                        <td>
+                            <dd id="artwork names">{{obra.name}}</dd>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <div *ngIf="selected">
+                <app-obra-detail [obraDetail]="selectedObra"></app-obra-detail>
+            </div>
+        </div>
+    </div>
+</div>

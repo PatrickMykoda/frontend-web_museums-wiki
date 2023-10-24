@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <p class="h3 p-3">{{ museoDetail.name }}</p>
+    <div class="row">
+        <div class="col3">
+            <dl>
+                <dd>
+                    <img class="img-fluid" src="{{ museoDetail.image }}" alt="{{ museoDetail.name }}" />
+                </dd>
+                <dt class="bold" i18n>Descripción</dt>
+                <dd>{{ museoDetail.description }}</dd>
+                <hr />
+                <dt class="bold" i18n>Dirección y ubicación en GoogleMaps</dt>
+                <dd>{{ museoDetail.address }}</dd>
+                <dt class="bold" i18n>Exhibiciones</dt>
+                <dd class="caption"><a routerLink="/exhibiciones/list" i18n>Ver Exhibiciones</a></dd>
+                <hr />
+            </dl>
+        </div>
+    </div>
+</div>

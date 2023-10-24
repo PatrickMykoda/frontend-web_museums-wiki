@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <p class="h3 p-3">{{artistaDetail.name}}</p>
+    <div class="row">
+        <div class="col">
+            <dl>
+                <dd>
+                    <img class="img-fluid" src="{{ artistaDetail.image }}" alt="{{ artistaDetail.name }}" aria-label="fotografía del artista" />
+                </dd>
+                <dt class="bold" i18n>Lugar y fecha de nacimiento:</dt>
+                <dd>{{artistaDetail.birthplace}}, {{artistaDetail.birthdate}}</dd>
+                <dt i18n>Movimientos</dt>
+                <dd class="caption" *ngFor="let movimiento of artistaDetail.movements ">{{ movimiento.name }}</dd>
+                <dt i18n>Obras</dt>
+                <dd class="caption" *ngFor="let obra of artistaDetail.artworks ">
+                    <a routerLink="/artworks/{{ obra.id }} ">
+                    {{ obra.name }}
+                  </a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

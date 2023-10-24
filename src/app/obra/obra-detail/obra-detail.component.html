@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <p class="h3 p-3">{{ obraDetail.name }}</p>
+    <div class="row">
+        <div class="col">
+            <dl>
+                <dd><img class="img-fluid" src="{{ obraDetail.mainImage }}" alt="{{ obraDetail.name }}" /></dd>
+                <dt i18n>Año</dt>
+                <dd>{{ obraDetail.year }}</dd>
+                <hr />
+                <dt i18n>Tipo</dt>
+                <dd>{{ obraDetail.type }}</dd>
+                <hr />
+                <dt class="bold" i18n>Artista</dt>
+                <dd class="caption">
+                    <a routerLink="/artists/{{ obraDetail.artist.id }}">
+            {{ obraDetail.artist.name }}
+          </a>
+                </dd>
+                <hr />
+                <dt class="bold" i18n>Descripción</dt>
+                <dd>{{ obraDetail.description }}</dd>
+                <dt i18n>Más imágenes</dt>
+                <dd class="img-fluid" *ngFor="let imagen of obraDetail.images">
+                    <img class="img-fluid" src="{{ imagen.source }}" alt="{{ imagen.altText }}" />
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>

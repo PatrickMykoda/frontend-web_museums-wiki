@@ -1,0 +1,55 @@
+<div class="container mt-4">
+  <h2 class="text-center" i18n>Nuevo Patrocinador</h2>
+  <form [formGroup]="sponsorForm" (ngSubmit)="!sponsorForm.invalid && createSponsor(sponsorForm.value)">
+      <!--Name-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="name" i18n>Nombre</label>
+          <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre del patrocinador" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        sponsorForm.get('name')!.hasError('required') &&
+        sponsorForm.get('name')!.touched" i18n>
+              Por favor ingrese el nombre del patrocinador!
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="sponsorForm.get('name')!.hasError('minlength')" i18n>
+              El nombre es demasiado corto!
+          </div>
+      </div>
+
+      <!--Description-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="description" i18n>Descripción</label>
+          <input novalidate id="description" class="form-control" formControlName="description" i18n-placeholder placeholder="Descripción del patrocinador" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        sponsorForm.get('description')!.hasError('required') &&
+        sponsorForm.get('description')!.touched
+      " i18n>
+              Descripción requerida
+          </div>
+      </div>
+
+      <!--Website-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="website" i18n>Página web del patrocinador</label>
+          <input novalidate id="website" class="form-control" formControlName="website" i18n-placeholder placeholder="Página web del patrocinador" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          sponsorForm.get('website')!.hasError('required') &&
+          sponsorForm.get('website')!.touched
+          " i18n>
+            Página web del patrocinador
+          </div>
+          <div
+       class="alert alert-danger alert-dismissible fade show"
+       *ngIf="sponsorForm.get('website')!.hasError('pattern')"
+       i18n>
+       Ingrese página web válida
+     </div>
+   </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!sponsorForm.valid" i18n>
+    Crear
+  </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
+    Cancelar
+  </button>
+  </form>
+</div>

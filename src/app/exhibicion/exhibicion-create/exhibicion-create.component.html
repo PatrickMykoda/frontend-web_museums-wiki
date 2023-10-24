@@ -1,0 +1,68 @@
+<div class="container mt-4">
+  <h2 class="text-center" i18n>Nueva exhibicion</h2>
+  <form [formGroup]="exhibicionForm" (ngSubmit)="!exhibicionForm.invalid && createExhibicion(exhibicionForm.value)">
+      <!--Name-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="name" i18n>Nombre</label>
+          <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre de la exhibicion" />
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        exhibicionForm.get('name')!.hasError('required') &&
+        exhibicionForm.get('name')!.touched" i18n>
+              Por favor ingrese el nombre de la exhibicion!
+          </div>
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="exhibicionForm.get('name')!.hasError('minlength')" i18n>
+              El nombre es demasiado corto!
+          </div>
+      </div>
+
+      <!--Description-->
+      <div class="form-group mx-sm-3 mb-2">
+          <label for="description" i18n>Descripción</label>
+          <input novalidate id="description" class="form-control" formControlName="description" i18n-placeholder placeholder="Descripción de la exhibicion"/>
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        exhibicionForm.get('description')!.hasError('required') &&
+        exhibicionForm.get('description')!.touched
+      " i18n>
+              Descripción requerida
+          </div>
+      </div>
+
+      <!--Sponsor-->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="sponsor" i18n>Patrocinador</label>
+        <select id="sponsor" class="form-control" formControlName="sponsor" i18n-placeholder placeholder="Seleccione al sponsor">
+          <option *ngFor="let sponsor of sponsors; index as i" value="{{sponsor.id}}">{{sponsor.name}}</option>
+        </select>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        exhibicionForm.get('sponsor')!.hasError('required') &&
+        exhibicionForm.get('sponsor')!.touched
+        " i18n>
+            Seleccione un patrocinador
+        </div>
+      </div>
+
+
+      <!--Museum-->
+      <div class="form-group mx-sm-3 mb-2">
+        <label for="museum" i18n>Museo</label>
+        <select id="museum" class="form-control" formControlName="museum" i18n-placeholder placeholder="Seleccione el museo">
+          <option *ngFor="let museum of museums; index as i" value="{{museum.id}}">{{museum.name}}</option>
+        </select>
+        <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        exhibicionForm.get('museum')!.hasError('required') &&
+        exhibicionForm.get('museum')!.touched
+        " i18n>
+            Seleccione un museo
+        </div>
+      </div>
+
+
+      <button type="submit" class="btn btn-primary" [disabled]="!exhibicionForm.valid" i18n>
+    Crear
+  </button>
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
+    Cancelar
+  </button>
+  </form>
+</div>
+

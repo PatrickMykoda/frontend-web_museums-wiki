@@ -1,0 +1,82 @@
+<div class="container mt-4">
+    <h2 class="text-center" i18n>Nueva Obra</h2>
+    <form [formGroup]="obraForm" (ngSubmit)="!obraForm.invalid && createObra(obraForm.value)">
+        <!--Name-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="name" i18n>Nombre</label>
+            <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre de la obra" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        obraForm.get('name')!.hasError('required') &&
+        obraForm.get('name')!.touched" i18n>
+                Por favor ingrese el nombre de la obra!
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="obraForm.get('name')!.hasError('minlength')" i18n>
+                El nombre es demasiado corto!
+            </div>
+        </div>
+
+        <!--Description-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="description" i18n>Descripción</label>
+            <input novalidate id="description" class="form-control" formControlName="description" i18n-placeholder placeholder="Descripción de la obra" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        obraForm.get('description')!.hasError('required') &&
+        obraForm.get('description')!.touched
+      " i18n>
+                Descripción requerida
+            </div>
+        </div>
+
+        <!--Year-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="year" i18n>Año de creación</label>
+            <input type="number" novalidate id="year" class="form-control" formControlName="year" i18n-placeholder placeholder="Año de creación de la obra" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          obraForm.get('year')!.hasError('required') &&
+          obraForm.get('year')!.touched
+          " i18n>
+                Año de creación requerido
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="obraForm.get('year')!.hasError('pattern')" i18n>
+                El valor debe ser numérico!
+            </div>
+        </div>
+
+        <!--Type-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="type" i18n>Tipo</label>
+            <select novalidate id="type" class="form-control" formControlName="type" i18n-placeholder placeholder="Tipo de obra">
+              <option value="Painting" i18n>Pintura</option>
+              <option value="Sculpture" i18n>Escultura</option>
+              <option value="Object" i18n>Objeto</option>
+            </select>
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+      obraForm.get('type')!.hasError('required') &&
+      obraForm.get('type')!.touched
+      " i18n>
+                Tipo requerido
+            </div>
+        </div>
+
+        <!--Artist-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="artist" i18n>Artista</label>
+            <select id="artist" class="form-control" formControlName="artist" i18n-placeholder placeholder="Seleccione el artista">
+              <option *ngFor="let artista of artistas; index as i" value="{{artista.id}}">{{artista.name}}</option>
+            </select>
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+      obraForm.get('artist')!.hasError('required') &&
+      obraForm.get('artist')!.touched
+      " i18n>
+                Seleccione un artista
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!obraForm.valid" i18n>
+    Crear
+  </button>
+        <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
+    Cancelar
+  </button>
+    </form>
+</div>

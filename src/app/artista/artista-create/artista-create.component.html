@@ -1,0 +1,59 @@
+<div class="container mt-4">
+    <h2 class="text-center" i18n>Nuevo Artista</h2>
+    <form [formGroup]="artistaForm" (ngSubmit)="!artistaForm.invalid && createArtista(artistaForm.value)">
+        <!--Name-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="name" i18n>Nombre</label>
+            <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre del artista" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          artistaForm.get('name')!.hasError('required') &&
+          artistaForm.get('name')!.touched" i18n>
+                Por favor ingrese el nombre del artista!
+            </div>
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="artistaForm.get('name')!.hasError('minlength')" i18n>
+                El nombre es demasiado corto!
+            </div>
+        </div>
+
+        <!--Birth Date-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="birthdate" i18n>Año de nacimiento</label>
+            <input novalidate id="birthdate" class="form-control" formControlName="birthdate" i18n-placeholder placeholder="Año de nacimiento del artista" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+          artistaForm.get('birthdate')!.hasError('required') &&
+          artistaForm.get('birthdate')!.touched
+        " i18n>Año de nacimiento requerido</div>
+        </div>
+
+        <!--Birth Place-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="birthplace" i18n>Lugar de nacimiento</label>
+            <input novalidate id="birthplace" class="form-control" formControlName="birthplace" i18n-placeholder placeholder="Lugar de nacimiento del artista" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+            artistaForm.get('birthplace')!.hasError('required') &&
+            artistaForm.get('birthplace')!.touched
+            " i18n>
+                Lugar de nacimiento requerido
+            </div>
+        </div>
+
+        <!--Image-->
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="image" i18n>Imagen</label>
+            <input novalidate id="image" class="form-control" formControlName="image" i18n-placeholder placeholder="URL con imagen del artista" />
+            <div class="alert alert-danger alert-dismissible fade show" *ngIf="
+        artistaForm.get('image')!.hasError('required') &&
+        artistaForm.get('image')!.touched
+        " i18n>
+                Imagen requerida
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!artistaForm.valid" i18n>
+      Crear
+    </button>
+        <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
+      Cancelar
+    </button>
+    </form>
+</div>

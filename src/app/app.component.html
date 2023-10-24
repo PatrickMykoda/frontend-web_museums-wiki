@@ -1,0 +1,83 @@
+<app-header>
+</app-header>
+
+<div class="wrapper">
+
+    <nav id="sidebar" aria-label="main navigation">
+        <ul class="list-unstyled components">
+            <li class="nav-item" id="link-home">
+                <a class="navbar-brand" href="#" i18n>Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+                Museo
+              </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" routerLink="/museums/list" i18n>Listado</a></li>
+                    <li><a class="dropdown-item" routerLink="/museums/create" i18n>Nuevo</a></li>
+                </ul>
+                <!-- Exhibiciones -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+              Exhibiciones
+            </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/exhibiciones/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/exhibiciones/create" i18n>Nueva</a></li>
+                    </ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+              Obras
+            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/artworks/list" i18n>Listado</a></li>
+                            <li><a class="dropdown-item" routerLink="/artworks/create" i18n>Nueva</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+                Artistas
+              </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/artists/list" i18n>Listado</a></li>
+                            <li><a class="dropdown-item" routerLink="/artists/create" i18n>Nuevo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+              Movimientos
+            </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/movements/list" i18n>Listado</a></li>
+                            <li><a class="dropdown-item" routerLink="/movements/create" i18n>Nuevo</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
+            Patrocinadores
+          </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" routerLink="/sponsors/list" i18n>Listado</a></li>
+                            <li><a class="dropdown-item" routerLink="/sponsors/create" i18n>Nuevo</a></li>
+                        </ul>
+                    </li>
+        </ul>
+    </nav>
+    <div id="content">
+
+        <!-- Main Router Outlet -->
+        <main>
+            <div class="container-fluid" id="principal">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <router-outlet></router-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+
+<app-footer></app-footer>

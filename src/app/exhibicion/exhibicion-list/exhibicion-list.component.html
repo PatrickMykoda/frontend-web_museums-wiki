@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <table class="table table-striped" aria-describedby="exhibiciones">
+                <thead>
+                    <caption id="exhibiciones" i18n>Exhibiciones</caption>
+                    <tr>
+                        <th caption="col" id="thmuseo" i18n>Museo</th>
+                        <th caption="col" id="thnombre" class="h4" i18n>Nombre</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let museo of museumsOfExhibitions">
+                    <th scope="row">{{ museo.name }}</th>
+                    <td>
+                        <!--(click)="onSelected(m)" entra en el tr de abajo-->
+                        <tr (click)="onSelected(exhibicion)" *ngFor="let exhibicion of museo.exhibitions">
+                            <td>
+                                <dd id="exhibition names">{{exhibicion.name}}</dd>
+                            </td>
+                        </tr>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-6">
+            <div *ngIf="selected">
+                <app-exhibicion-detail [exhibicionDetail]="selectedExhibicion"></app-exhibicion-detail>
+            </div>
+        </div>
+    </div>
+</div>
