@@ -55,7 +55,7 @@ ul {
 }
 
 .collapsing {
-    transition: 0.2s;
+    transition: 0.4s;
 }
 
 /*.collapse:not(.show),

@@ -9,7 +9,7 @@
             </li>
             <!-- Museos -->
             <li class="nav-item">
-                <a id="item-museos" class="nav-link" data-bs-toggle="collapse" href="#collapseMuseos" aria-expanded="false" aria-controls="collapseMuseos" (click)="openAccordeon('collapseMuseos')" i18n>
+                <a id="item-museos" class="nav-link" data-bs-toggle="collapse" href="#collapseMuseos" aria-expanded="false" aria-controls="collapseMuseos" (click)="setAccordion('collapseMuseos')" i18n>
                 Museos
                 </a>
                 <ul class="collapse" id="collapseMuseos" data-bs-parent="#nav-accordion">
@@ -19,7 +19,7 @@
             </li>
             <!-- Exhibiciones -->
             <li class="nav-item dropdown">
-                <a id="item-exhibiciones" class="nav-link" data-bs-toggle="collapse" href="#collapseExhibiciones" aria-expanded="false" aria-controls="collapseExhibiciones" i18n>
+                <a id="item-exhibiciones" class="nav-link" data-bs-toggle="collapse" href="#collapseExhibiciones" aria-expanded="false" aria-controls="collapseExhibiciones" (click)="setAccordion('collapseExhibiciones')" i18n>
                     Exhibiciones
                 </a>
                 <ul class="collapse" id="collapseExhibiciones" data-bs-parent="#nav-accordion">
@@ -29,7 +29,7 @@
             </li>
             <!-- Obras -->
             <li class="nav-item dropdown">
-                <a id="item-obras" class="nav-link" data-bs-toggle="collapse" href="#collapseObras" aria-expanded="false" aria-controls="collapseObras" i18n>
+                <a id="item-obras" class="nav-link" data-bs-toggle="collapse" href="#collapseObras" aria-expanded="false" aria-controls="collapseObras" (click)="setAccordion('collapseObras')" i18n>
                     Obras
                 </a>
                 <ul class="collapse" id="collapseObras" data-bs-parent="#nav-accordion">
@@ -39,7 +39,7 @@
             </li>
             <!-- Artistas -->
             <li class="nav-item dropdown">
-                <a id="item-artistas" class="nav-link" data-bs-toggle="collapse" href="#collapseArtistas" aria-expanded="false" aria-controls="collapseArtistas" i18n>
+                <a id="item-artistas" class="nav-link" data-bs-toggle="collapse" href="#collapseArtistas" aria-expanded="false" aria-controls="collapseArtistas" (click)="setAccordion('collapseArtistas')" i18n>
                     Artistas
                 </a>
                 <ul class="collapse" id="collapseArtistas" data-bs-parent="#nav-accordion">
@@ -49,7 +49,7 @@
             </li>
             <!-- Movimientos -->
             <li class="nav-item dropdown">
-                <a id="item-movimientos" class="nav-link" data-bs-toggle="collapse" href="#collapseMovimientos" aria-expanded="false" aria-controls="collapseMovimientos" i18n>
+                <a id="item-movimientos" class="nav-link" data-bs-toggle="collapse" href="#collapseMovimientos" aria-expanded="false" aria-controls="collapseMovimientos" (click)="setAccordion('collapseMovimientos')" i18n>
                     Movimientos
                 </a>
                 <ul class="collapse" id="collapseMovimientos" data-bs-parent="#nav-accordion">
@@ -59,7 +59,7 @@
             </li>
             <!-- Patrocinadores -->
             <li class="nav-item dropdown">
-                <a id="item-patrocinadores" class="nav-link" data-bs-toggle="collapse" href="#collapsePatrocinadores" aria-expanded="false" aria-controls="collapsePatrocinadores" i18n>
+                <a id="item-patrocinadores" class="nav-link" data-bs-toggle="collapse" href="#collapsePatrocinadores" aria-expanded="false" aria-controls="collapsePatrocinadores" (click)="setAccordion('collapsePatrocinadores')" i18n>
                     Patrocinadores
                 </a>
                 <ul class="collapse" id="collapsePatrocinadores" data-bs-parent="#nav-accordion">
