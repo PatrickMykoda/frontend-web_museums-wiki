@@ -1,70 +1,75 @@
-<app-header>
-</app-header>
+<app-header></app-header>
 
 <div class="wrapper">
-
     <nav id="sidebar" aria-label="main navigation">
-        <ul class="list-unstyled components">
+        <ul class="accordion" id="nav-accordion">
+            <!-- Inicio -->
             <li class="nav-item" id="link-home">
-                <a class="navbar-brand" href="#" i18n>Inicio</a>
+                <a class="nav-link" href="#" i18n>Inicio</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-                Museo
-              </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <!-- Museos -->
+            <li class="nav-item">
+                <a id="item-museos" class="nav-link" data-bs-toggle="collapse" href="#collapseMuseos" aria-expanded="false" aria-controls="collapseMuseos" (click)="openAccordeon('collapseMuseos')" i18n>
+                Museos
+                </a>
+                <ul class="collapse" id="collapseMuseos" data-bs-parent="#nav-accordion">
                     <li><a class="dropdown-item" routerLink="/museums/list" i18n>Listado</a></li>
                     <li><a class="dropdown-item" routerLink="/museums/create" i18n>Nuevo</a></li>
                 </ul>
-                <!-- Exhibiciones -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-              Exhibiciones
-            </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" routerLink="/exhibiciones/list" i18n>Listado</a></li>
-                        <li><a class="dropdown-item" routerLink="/exhibiciones/create" i18n>Nueva</a></li>
-                    </ul>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-              Obras
-            </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/artworks/list" i18n>Listado</a></li>
-                            <li><a class="dropdown-item" routerLink="/artworks/create" i18n>Nueva</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-                Artistas
-              </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/artists/list" i18n>Listado</a></li>
-                            <li><a class="dropdown-item" routerLink="/artists/create" i18n>Nuevo</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-              Movimientos
-            </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/movements/list" i18n>Listado</a></li>
-                            <li><a class="dropdown-item" routerLink="/movements/create" i18n>Nuevo</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" i18n>
-            Patrocinadores
-          </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" routerLink="/sponsors/list" i18n>Listado</a></li>
-                            <li><a class="dropdown-item" routerLink="/sponsors/create" i18n>Nuevo</a></li>
-                        </ul>
-                    </li>
+            </li>
+            <!-- Exhibiciones -->
+            <li class="nav-item dropdown">
+                <a id="item-exhibiciones" class="nav-link" data-bs-toggle="collapse" href="#collapseExhibiciones" aria-expanded="false" aria-controls="collapseExhibiciones" i18n>
+                    Exhibiciones
+                </a>
+                <ul class="collapse" id="collapseExhibiciones" data-bs-parent="#nav-accordion">
+                    <li><a class="dropdown-item" routerLink="/exhibiciones/list" i18n>Listado</a></li>
+                    <li><a class="dropdown-item" routerLink="/exhibiciones/create" i18n>Nueva</a></li>
+                </ul>
+            </li>
+            <!-- Obras -->
+            <li class="nav-item dropdown">
+                <a id="item-obras" class="nav-link" data-bs-toggle="collapse" href="#collapseObras" aria-expanded="false" aria-controls="collapseObras" i18n>
+                    Obras
+                </a>
+                <ul class="collapse" id="collapseObras" data-bs-parent="#nav-accordion">
+                    <li><a class="dropdown-item" routerLink="/artworks/list" i18n>Listado</a></li>
+                    <li><a class="dropdown-item" routerLink="/artworks/create" i18n>Nueva</a></li>
+                </ul>
+            </li>
+            <!-- Artistas -->
+            <li class="nav-item dropdown">
+                <a id="item-artistas" class="nav-link" data-bs-toggle="collapse" href="#collapseArtistas" aria-expanded="false" aria-controls="collapseArtistas" i18n>
+                    Artistas
+                </a>
+                <ul class="collapse" id="collapseArtistas" data-bs-parent="#nav-accordion">
+                    <li><a class="dropdown-item" routerLink="/artists/list" i18n>Listado</a></li>
+                    <li><a class="dropdown-item" routerLink="/artists/create" i18n>Nuevo</a></li>
+                </ul>
+            </li>
+            <!-- Movimientos -->
+            <li class="nav-item dropdown">
+                <a id="item-movimientos" class="nav-link" data-bs-toggle="collapse" href="#collapseMovimientos" aria-expanded="false" aria-controls="collapseMovimientos" i18n>
+                    Movimientos
+                </a>
+                <ul class="collapse" id="collapseMovimientos" data-bs-parent="#nav-accordion">
+                    <li><a class="dropdown-item" routerLink="/movements/list" i18n>Listado</a></li>
+                    <li><a class="dropdown-item" routerLink="/movements/create" i18n>Nuevo</a></li>
+                </ul>
+            </li>
+            <!-- Patrocinadores -->
+            <li class="nav-item dropdown">
+                <a id="item-patrocinadores" class="nav-link" data-bs-toggle="collapse" href="#collapsePatrocinadores" aria-expanded="false" aria-controls="collapsePatrocinadores" i18n>
+                    Patrocinadores
+                </a>
+                <ul class="collapse" id="collapsePatrocinadores" data-bs-parent="#nav-accordion">
+                    <li><a class="dropdown-item" routerLink="/sponsors/list" i18n>Listado</a></li>
+                    <li><a class="dropdown-item" routerLink="/sponsors/create" i18n>Nuevo</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <div id="content">
-
         <!-- Main Router Outlet -->
         <main>
             <div class="container-fluid" id="principal">

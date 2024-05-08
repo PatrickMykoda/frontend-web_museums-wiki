@@ -3,29 +3,128 @@
     align-items: stretch;
 }
 
+#content {
+    width: 100%;
+}
+
 #sidebar {
-    min-width: 150px;
-    max-width: 150px;
-    min-height: 90vh;
+    width: 180px;
     background: #2C3888;
     color: #fff;
-    transition: all 0.3s;
 }
 
 #sidebar.active {
     margin-left: -250px;
 }
 
-a[data-toggle="collapse"] {
-    position: relative;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.dropdown-toggle::after {
+.nav-link {
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.1em;
     display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    text-shadow: -1px 1px 0px #767fb7,
+                -2px 2px 0px #5560a5,
+                -3px 3px 0px #3e4a94
+}
+
+.nav-link:hover {
+    color: #2C3888;
+    background: #fff;
+    text-shadow: -1px 1px 0px #747db581,
+                -2px 2px 0px #aaaec982,
+                -3px 3px 0px #e2e3ec80;
+}
+
+/*.collapse {
+    animation: fold-in 0.6s ease-out none;
+}*/
+
+.collapsing.opening {
+    height: auto;
+    animation: fold-in 0.4s ease-out none;
+}
+
+.collapsing.closing {
+    height: auto;
+    animation: fold-out 0.4s linear forwards;
+}
+
+.collapsing {
+    transition: 0.2s;
+}
+
+/*.collapse:not(.show),
+.collapse {
+  display: block !important;
+  visibility: visible;
+  
+}
+
+.collapse.show {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition: 1s transform ease-in;
+    -o-transition: 1s transform ease-in;
+    transition: 1s transform ease-in;
+    
+}
+
+.collapsing {
+    /*height: auto !important;
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0);
+    transform: perspective(400px) rotate3d(1, 0, 0, 0);
+    -webkit-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition: 0.5s transform ease-out !important;
+    -o-transition: 0.5s transform ease-out !important;
+    transition: 0.5s transform ease-out !important;
+}*/
+
+@keyframes fold-in {
+    0% {
+        transform-origin: 50% 0;
+        transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
+        height: 0%;
+    }
+    100% {
+        transform: perspective(600px) rotate3d(0, 0, 0, 0deg);
+        height: 100%;
+    }
+}
+
+@keyframes fold-out {
+    0% {
+        transform: perspective(600px) rotate3d(0, 0, 0, 0deg);
+        height: 100%;
+    }
+    100% {
+        transform-origin: 50% 0;
+        transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
+        height: 0%;
+    }
+}
+
+.dropdown-item {
+    background-color: #fff;
+    color: #2C3888;
+    text-shadow: -1px 1px 0px #747db581,
+                -2px 2px 0px #aaaec982,
+                -3px 3px 0px #e2e3ec80;
+}
+
+.dropdown-item:hover {
+    text-shadow: -1px 1px 0px #747db534,
+                -2px 2px 0px #aaaec928,
+                -3px 3px 0px #e2e3ec24;
 }
 
 @media (max-width: 768px) {
@@ -35,69 +134,4 @@ a[data-toggle="collapse"] {
     #sidebar.active {
         margin-left: 0;
     }
-}
-
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.1em;
-    font-weight: 300;
-    line-height: 1.7em;
-    color: #999;
-}
-
-a,
-a:hover,
-a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #2C3888;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a:hover {
-    color: #2C3888;
-    background: #fff;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #2C3888;
-}
-
-ul ul a {
-    color: #fff;
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #2C3888;
-}
-
-#content {
-    width: 100%;
 }
