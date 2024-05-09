@@ -27,10 +27,6 @@ ul {
     padding: 0;
 }
 
-.nav-item ul {
-    width: 100%;
-}
-
 .nav-link {
     background: #2C3888;
     color: #fff;
@@ -51,55 +47,19 @@ ul {
                 -3px 3px 0px #e2e3ec80;
 }
 
-/*.collapse {
-    animation: fold-in 0.6s ease-out none;
-}*/
 
 .opening {
     animation: fold-in 0.8s ease-out;
 }
 
 .closing {
-    animation: fold-out 0.8s linear forwards;
+    animation: fold-out 0.8s linear;
 }
-
-/*.collapse:not(.show),
-.collapse {
-  display: block !important;
-  visibility: visible;
-  
-}
-
-.collapse.show {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-transform-origin: 50% 0;
-    -ms-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-transition: 1s transform ease-in;
-    -o-transition: 1s transform ease-in;
-    transition: 1s transform ease-in;
-    
-}
-
-.collapsing {
-    /*height: auto !important;
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0);
-    transform: perspective(400px) rotate3d(1, 0, 0, 0);
-    -webkit-transform-origin: 50% 0;
-    -ms-transform-origin: 50% 0;
-    transform-origin: 50% 0;
-    -webkit-transition: 0.5s transform ease-out !important;
-    -o-transition: 0.5s transform ease-out !important;
-    transition: 0.5s transform ease-out !important;
-}*/
 
 @keyframes fold-in {
     0% {
-        display: inline;
         transform-origin: 50% 0;
         transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
-        height: 0%;
         box-shadow: -10px 10px 5px #747db581;
     } 30% {
         box-shadow: -15px 15px 10px #747db581;
@@ -108,14 +68,12 @@ ul {
     }
     100% {
         transform: perspective(600px) rotate3d(0, 0, 0, 0deg);
-        height: 100%;
     }
 }
 
 @keyframes fold-out {
     0% {
         transform: perspective(600px) rotate3d(0, 0, 0, 0deg);
-        height: 100%;
     } 30% {
         box-shadow: -20px 20px 15px #747db581;
     } 60% {
@@ -124,12 +82,19 @@ ul {
     99% {
         transform-origin: 50% 0;
         transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
-        height: 0%;
         box-shadow: -10px 10px 5px #747db581;
     }
-    100% {
-        display: none;
-    }
+}
+
+.dropdown-list {
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.6s ease;
+}
+
+.dropdown-list.open {
+    height: 86px;
 }
 
 .dropdown-item {
