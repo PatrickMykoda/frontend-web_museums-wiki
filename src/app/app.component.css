@@ -1,10 +1,15 @@
 .wrapper {
     display: flex;
     align-items: stretch;
+    background: white;
 }
 
 #content {
     width: 100%;
+}
+
+.hide {
+    display: none;
 }
 
 #sidebar {
@@ -22,8 +27,14 @@ ul {
     padding: 0;
 }
 
+.nav-item ul {
+    width: 100%;
+}
+
 .nav-link {
+    background: #2C3888;
     color: #fff;
+    cursor: pointer;
     padding: 10px 20px;
     font-size: 1.1em;
     display: block;
@@ -44,18 +55,12 @@ ul {
     animation: fold-in 0.6s ease-out none;
 }*/
 
-.collapsing.opening {
-    height: auto;
-    animation: fold-in 0.4s ease-out none;
+.opening {
+    animation: fold-in 0.8s ease-out;
 }
 
-.collapsing.closing {
-    height: auto;
-    animation: fold-out 0.4s linear forwards;
-}
-
-.collapsing {
-    transition: 0.4s;
+.closing {
+    animation: fold-out 0.8s linear forwards;
 }
 
 /*.collapse:not(.show),
@@ -91,9 +96,15 @@ ul {
 
 @keyframes fold-in {
     0% {
+        display: inline;
         transform-origin: 50% 0;
         transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
         height: 0%;
+        box-shadow: -10px 10px 5px #747db581;
+    } 30% {
+        box-shadow: -15px 15px 10px #747db581;
+    } 60% {
+        box-shadow: -20px 20px 15px #747db581;
     }
     100% {
         transform: perspective(600px) rotate3d(0, 0, 0, 0deg);
@@ -105,26 +116,37 @@ ul {
     0% {
         transform: perspective(600px) rotate3d(0, 0, 0, 0deg);
         height: 100%;
+    } 30% {
+        box-shadow: -20px 20px 15px #747db581;
+    } 60% {
+        box-shadow: -15px 15px 10px #747db581;
     }
-    100% {
+    99% {
         transform-origin: 50% 0;
         transform: perspective(600px) rotate3d(1, 0, 0, -90deg);
         height: 0%;
+        box-shadow: -10px 10px 5px #747db581;
+    }
+    100% {
+        display: none;
     }
 }
 
 .dropdown-item {
-    background-color: #fff;
-    color: #2C3888;
-    text-shadow: -1px 1px 0px #747db581,
-                -2px 2px 0px #aaaec982,
-                -3px 3px 0px #e2e3ec80;
+    background-color: #2C3888;
+    color: #fff;
+    padding: 10px 40px;
+    text-shadow: -1px 1px 0px #767fb7,
+                -2px 2px 0px #5560a5,
+                -3px 3px 0px #3e4a94
 }
 
 .dropdown-item:hover {
-    text-shadow: -1px 1px 0px #747db534,
-                -2px 2px 0px #aaaec928,
-                -3px 3px 0px #e2e3ec24;
+    color: #2C3888;
+    background: #fff;
+    text-shadow: -1px 1px 0px #747db581,
+                -2px 2px 0px #aaaec982,
+                -3px 3px 0px #e2e3ec80;
 }
 
 @media (max-width: 768px) {

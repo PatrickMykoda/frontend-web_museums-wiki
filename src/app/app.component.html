@@ -2,70 +2,82 @@
 
 <div class="wrapper">
     <nav id="sidebar" aria-label="main navigation">
-        <ul class="accordion" id="nav-accordion">
+        <ul id="nav-list">
             <!-- Inicio -->
             <li class="nav-item" id="link-home">
                 <a class="nav-link" href="#" i18n>Inicio</a>
             </li>
             <!-- Museos -->
             <li class="nav-item">
-                <a id="item-museos" class="nav-link" data-bs-toggle="collapse" href="#collapseMuseos" aria-expanded="false" aria-controls="collapseMuseos" (click)="setAccordion('collapseMuseos')" i18n>
-                Museos
+                <a id="item-museos" class="nav-link" (click)="setAccordion('museos')" i18n>
+                    Museos
                 </a>
-                <ul class="collapse" id="collapseMuseos" data-bs-parent="#nav-accordion">
-                    <li><a class="dropdown-item" routerLink="/museums/list" i18n>Listado</a></li>
-                    <li><a class="dropdown-item" routerLink="/museums/create" i18n>Nuevo</a></li>
-                </ul>
+                <div id="wrapper-museos" class="wrapper">
+                    <ul id="museos" class="hide">
+                        <li><a class="dropdown-item" routerLink="/museums/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/museums/create" i18n>Nuevo</a></li>
+                    </ul>
+                </div>
             </li>
             <!-- Exhibiciones -->
-            <li class="nav-item dropdown">
-                <a id="item-exhibiciones" class="nav-link" data-bs-toggle="collapse" href="#collapseExhibiciones" aria-expanded="false" aria-controls="collapseExhibiciones" (click)="setAccordion('collapseExhibiciones')" i18n>
+            <li class="nav-item">
+                <a id="item-exhibiciones" class="nav-link" (click)="setAccordion('exhibiciones')" i18n>
                     Exhibiciones
                 </a>
-                <ul class="collapse" id="collapseExhibiciones" data-bs-parent="#nav-accordion">
-                    <li><a class="dropdown-item" routerLink="/exhibiciones/list" i18n>Listado</a></li>
-                    <li><a class="dropdown-item" routerLink="/exhibiciones/create" i18n>Nueva</a></li>
-                </ul>
+                <div id="wrapper-exhibiciones" class="wrapper">
+                    <ul id="exhibiciones" class="hide">
+                        <li><a class="dropdown-item" routerLink="/exhibiciones/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/exhibiciones/create" i18n>Nueva</a></li>
+                    </ul>
+                </div>
             </li>
             <!-- Obras -->
-            <li class="nav-item dropdown">
-                <a id="item-obras" class="nav-link" data-bs-toggle="collapse" href="#collapseObras" aria-expanded="false" aria-controls="collapseObras" (click)="setAccordion('collapseObras')" i18n>
+            <li class="nav-item">
+                <a id="item-obras" class="nav-link" (click)="setAccordion('obras')" i18n>
                     Obras
                 </a>
-                <ul class="collapse" id="collapseObras" data-bs-parent="#nav-accordion">
-                    <li><a class="dropdown-item" routerLink="/artworks/list" i18n>Listado</a></li>
-                    <li><a class="dropdown-item" routerLink="/artworks/create" i18n>Nueva</a></li>
-                </ul>
+                <div id="wrapper-obras" class="wrapper">
+                    <ul id="obras" class="hide">
+                        <li><a class="dropdown-item" routerLink="/artworks/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/artworks/create" i18n>Nueva</a></li>
+                    </ul>
+                </div>
             </li>
             <!-- Artistas -->
-            <li class="nav-item dropdown">
-                <a id="item-artistas" class="nav-link" data-bs-toggle="collapse" href="#collapseArtistas" aria-expanded="false" aria-controls="collapseArtistas" (click)="setAccordion('collapseArtistas')" i18n>
+            <li class="nav-item">
+                <a id="item-artistas" class="nav-link" (click)="setAccordion('artistas')" i18n>
                     Artistas
                 </a>
-                <ul class="collapse" id="collapseArtistas" data-bs-parent="#nav-accordion">
-                    <li><a class="dropdown-item" routerLink="/artists/list" i18n>Listado</a></li>
-                    <li><a class="dropdown-item" routerLink="/artists/create" i18n>Nuevo</a></li>
-                </ul>
+                <div id="wrapper-artistas" class="wrapper">
+                    <ul id="artistas" class="hide">
+                        <li><a class="dropdown-item" routerLink="/artists/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/artists/create" i18n>Nuevo</a></li>
+                    </ul>
+                </div>
             </li>
             <!-- Movimientos -->
-            <li class="nav-item dropdown">
-                <a id="item-movimientos" class="nav-link" data-bs-toggle="collapse" href="#collapseMovimientos" aria-expanded="false" aria-controls="collapseMovimientos" (click)="setAccordion('collapseMovimientos')" i18n>
+            <li class="nav-item">
+                <a id="item-movimientos" class="nav-link" (click)="setAccordion('movimientos')" i18n>
                     Movimientos
                 </a>
-                <ul class="collapse" id="collapseMovimientos" data-bs-parent="#nav-accordion">
-                    <li><a class="dropdown-item" routerLink="/movements/list" i18n>Listado</a></li>
-                    <li><a class="dropdown-item" routerLink="/movements/create" i18n>Nuevo</a></li>
-                </ul>
+                <div id="wrapper-movimientos" class="wrapper">
+                    <ul id="movimientos" class="hide">
+                        <li><a class="dropdown-item" routerLink="/movements/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/movements/create" i18n>Nuevo</a></li>
+                    </ul>
+                </div>
             </li>
             <!-- Patrocinadores -->
-            <li class="nav-item dropdown">
-                <a id="item-patrocinadores" class="nav-link" data-bs-toggle="collapse" href="#collapsePatrocinadores" aria-expanded="false" aria-controls="collapsePatrocinadores" (click)="setAccordion('collapsePatrocinadores')" i18n>
+            <li class="nav-item">
+                <a id="item-patrocinadores" class="nav-link" (click)="setAccordion('patrocinadores')" i18n>
                     Patrocinadores
                 </a>
-                <ul class="collapse" id="collapsePatrocinadores" data-bs-parent="#nav-accordion">
-                    <li><a class="dropdown-item" routerLink="/sponsors/list" i18n>Listado</a></li>
-                    <li><a class="dropdown-item" routerLink="/sponsors/create" i18n>Nuevo</a></li>
-                </ul>
+                <div id="wrapper-movimientos" class="wrapper">
+                    <ul  id="patrocinadores" class="hide">
+                        <li><a class="dropdown-item" routerLink="/sponsors/list" i18n>Listado</a></li>
+                        <li><a class="dropdown-item" routerLink="/sponsors/create" i18n>Nuevo</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
     </nav>
