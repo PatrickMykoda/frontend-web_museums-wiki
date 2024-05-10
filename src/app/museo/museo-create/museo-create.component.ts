@@ -6,11 +6,16 @@ import { MuseoService } from '../museo.service';
 
 @Component({
   selector: 'app-museo-create',
-  templateUrl: './museo-create.component.html'
+  templateUrl: './museo-create.component.html',
+  styleUrls: ['./museo-create.component.css']
 })
 export class MuseoCreateComponent implements OnInit {
 
   museoForm!: FormGroup;
+  animationButton!: HTMLElement;
+  container!: HTMLElement;
+  animationOn!: boolean;
+  animationIcon!: HTMLElement;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -26,7 +31,9 @@ export class MuseoCreateComponent implements OnInit {
       city: ["", Validators.required],
       image: ["", Validators.required]
   })
-
+  this.animationOn = true;
+  this.animationButton = document.getElementById('btn-animation')!;
+  this.animationButton.addEventListener('click', () => this.toggleAnimation());
 }
 
   createMuseo(museo: Museo){
@@ -40,5 +47,39 @@ export class MuseoCreateComponent implements OnInit {
   cancelCreation(){
     this.museoForm.reset();
 }
+
+  toggleAnimation(){
+    this.container = document.getElementById('create-museo-container')!;
+    this.animationIcon = document.getElementById('animation-icon')!;
+
+    if(this.animationOn){
+      // Code executes if the animationOn flag is true an changes the background-image to the current image of the animation
+      let styles = window.getComputedStyle(this.container);
+      let currentBackground = styles.backgroundImage;
+      let list = currentBackground.split(" ");
+      console.log("This is the list: ",list);
+
+      if (list.length == 1){
+        // Firefox doesn't cross-fade which is why there might only one url in the list
+        currentBackground = list[0];
+      } else {
+        // Browsers like Chrome and Edge cross-fade which is why there are more image URLs in the list
+        currentBackground = list[2].slice(0, list[2].length - 1);
+
+      }
+      console.log("This is the single url: ",currentBackground)
+      this.container.style.backgroundImage = currentBackground;
+      this.animationOn = false;
+      this.animationIcon.classList.remove('fa-circle-pause');
+      this.animationIcon.classList.add('fa-circle-play');
+    } else {
+      this.animationOn = true;
+      this.animationIcon.classList.remove('fa-circle-play');
+      this.animationIcon.classList.add('fa-circle-pause');
+    }
+    
+    this.container.classList.toggle('hide-animation');
+    
+  }
 
 }
