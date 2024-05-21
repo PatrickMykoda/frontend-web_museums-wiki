@@ -12,6 +12,9 @@ form {
 }
 
 @keyframes picture-roll {
+    0% {
+        background-image: url(./../../../assets/frame1-square.png);
+    }
     10% {
         background-image: url(./../../../assets/frame2-horizontal.png);
     }
@@ -38,9 +41,6 @@ form {
     }
     90% {
         background-image: url(./../../../assets/frame10-horizontal.jpg);
-    }
-    100% {
-        background-image: url(./../../../assets/frame1-square.png);
     }
 }
 

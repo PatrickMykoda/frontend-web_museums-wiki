@@ -12,9 +12,12 @@
                 <hr />
                 <dt class="bold" i18n>Artista</dt>
                 <dd class="caption">
+                    <img class="profile-pic" alt="{{ obraDetail.artist.name }}" src="{{ obraDetail.artist.image }}" routerLink="/artists/{{ obraDetail.artist.id }}">
+                </dd>
+                <dd class="caption">
                     <a routerLink="/artists/{{ obraDetail.artist.id }}">
-            {{ obraDetail.artist.name }}
-          </a>
+                        {{ obraDetail.artist.name }}
+                    </a>
                 </dd>
                 <hr />
                 <dt class="bold" i18n>Descripción</dt>

@@ -13,6 +13,12 @@
                 <dd>{{ museoDetail.address }}</dd>
                 <dt class="bold" i18n>Exhibiciones</dt>
                 <dd class="caption"><a routerLink="/exhibiciones/list" i18n>Ver Exhibiciones</a></dd>
+                <dt i18n>Obras</dt>
+                <dd class="caption" *ngFor="let obra of museoDetail.artworks ">
+                    <a routerLink="/artworks/{{ obra.id }} ">
+                    {{ obra.name }}
+                  </a>
+                </dd>
                 <hr />
             </dl>
         </div>
