@@ -19,7 +19,8 @@ caption {
 
 .list-container {
     display: grid;
-    grid-template-columns: repeat(4, fr);
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .list-item {
@@ -36,6 +37,7 @@ caption {
     margin: 0;
     padding: 0;
     filter: drop-shadow(0 3px 3px lightgray);
+    border-radius: 1px;
 }
 
 .list-item:hover {
@@ -55,11 +57,25 @@ caption {
 }
 
 .side-list {
-    grid-column: 1;
+    max-height: 465px;
+    grid-column: 3;
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.side-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
 }
 
 .main-content {
-    grid-column: 2 / 6;
+    grid-column: 1/3;
+    max-height: 465px;
+}
+
+.main-content img {
+    object-fit: cover;
+    width: calc(100% - 20px);
+    max-height: 465px;
 }
 
 .list-item-bottom {

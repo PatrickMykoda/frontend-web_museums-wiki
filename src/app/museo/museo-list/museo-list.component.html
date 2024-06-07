@@ -1,6 +1,12 @@
 <div class="main-container">
     <p>Encuentra algunos de los museos mas historicos del mundo</p>
     <div class="list-container">
+        <div class="main-content">
+            <div>
+                <!--<app-museo-detail [museoDetail]="selectedMuseo"></app-museo-detail>-->
+                <img src="{{selectedMuseo.image}}" alt="{{selectedMuseo.name}}" />
+            </div>
+        </div>
         <div class="side-list">
             <table class="" aria-describedby="museos">
                 <tbody>
@@ -12,11 +18,6 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
-        <div class="main-content">
-            <div>
-                <app-museo-detail [museoDetail]="selectedMuseo"></app-museo-detail>
-            </div>
         </div>
     </div>
 </div>
