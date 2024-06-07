@@ -24,13 +24,22 @@
                 </tbody>
             </table>
         </div>
-        <div class="item-name">{{selectedMuseo.name}}</div>
-        <div class="item-location">{{selectedMuseo.city}} - {{selectedMuseo.address}}</div>
-        <div class="item-description">{{selectedMuseo.description}}</div>
-        <div class="item-relations" *ngFor="let obra of selectedMuseo.artworks ">
-            <a routerLink="/artworks/{{ obra.id }} ">
-                {{ obra.name }}
-            </a>
+        <div class="item-name-and-description">
+            <h2 class="item-name">{{selectedMuseo.name}}</h2>
+            <p class="item-description">{{selectedMuseo.description}}</p>
+        </div>
+        <div class="item-location">
+            <p>{{selectedMuseo.city}} - {{selectedMuseo.address}}</p>
+        </div>
+        <div class="item-relations">
+            <div *ngFor="let obra of selectedMuseo.artworks ">
+                <div class="list-image-frame">
+                    <img src="{{obra.mainImage}}" alt="{{obra.name}}" class="list-pic"/>
+                </div>
+                <a routerLink="/artworks/{{ obra.id }} ">
+                    {{ obra.name }}
+                </a>
+            </div>
         </div>
     </div>
 </div>
