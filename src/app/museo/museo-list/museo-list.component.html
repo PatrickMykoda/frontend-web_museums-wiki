@@ -1,10 +1,15 @@
 <div class="main-container">
-    <p>Encuentra algunos de los museos mas historicos del mundo</p>
     <div class="list-container">
-        <div class="main-content">
+        <div class="list-description">
+            <h1>Encuentra algunos de los museos mas historicos del mundo</h1>
+        </div>
+        <div class="side-list-hint">
+            <p>Browse Museos <i id="animation-icon" class="fa-solid fa-caret-right animation-control"></i></p>
+        </div>
+        <div class="item-image">
             <div>
                 <!--<app-museo-detail [museoDetail]="selectedMuseo"></app-museo-detail>-->
-                <img src="{{selectedMuseo.image}}" alt="{{selectedMuseo.name}}" />
+                <img src="{{selectedMuseo.image}}"/>
             </div>
         </div>
         <div class="side-list">
@@ -18,6 +23,14 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="item-name">{{selectedMuseo.name}}</div>
+        <div class="item-location">{{selectedMuseo.city}} - {{selectedMuseo.address}}</div>
+        <div class="item-description">{{selectedMuseo.description}}</div>
+        <div class="item-relations" *ngFor="let obra of selectedMuseo.artworks ">
+            <a routerLink="/artworks/{{ obra.id }} ">
+                {{ obra.name }}
+            </a>
         </div>
     </div>
 </div>

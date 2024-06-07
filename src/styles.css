@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    scrollbar-width: none; /* For Firefox */
+}
+    
+*::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+}
+
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 * {
     font-family: 'Poppins', sans-serif;
@@ -23,8 +31,64 @@ caption {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.list-description{
+    grid-column: 1/3;
+    grid-row: 1;
+    z-index: 2;
+    width: calc(100% - 10px);
+    padding: 15px 50% 0 20px;
+    color: white;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.4),
+              10px 10px 5px rgba(0,0,0,0.3),
+              -10px 10px 5px rgba(0, 0, 0, 0.2);
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.0.6) 0%, rgba(0,0,0,0) 100%);
+}
+
+.side-list-hint {
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 2;
+    padding: 15px 30px;
+    text-align: right;
+    color: white;
+    font-size: 1.5rem;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.4),
+              10px 10px 5px rgba(0,0,0,0.3),
+              -10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.side-list {
+    grid-column: 3;
+    grid-row: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 465px;
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.side-list::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari and Opera */
+}
+
+.item-image {
+    grid-column: 1/3;
+    grid-row: 1;
+    z-index: 1;
+    max-height: 465px;
+}
+
+.item-image img {
+    object-fit: cover;
+    height: 465px;
+    width: calc(100% - 10px);
+    background-image: url('./assets/placeholder-museum.png');
+    background-size: contain;
+}
+
 .list-item {
-    width: 350px;
     height: 50px;
     border-left: solid 3px transparent;
     border-right: solid 3px transparent;
@@ -44,7 +108,7 @@ caption {
     border-right: none;
     border-left: none;
     margin-left: 3px;
-    width: 344px;
+    width: calc(100% - 6px);
     height: 55px;
 }
 
@@ -56,30 +120,7 @@ caption {
     transform: translateY(25px);
 }
 
-.side-list {
-    max-height: 465px;
-    grid-column: 3;
-    overflow-y: scroll;
-    scrollbar-width: none; /* For Firefox */
-}
-
-.side-list::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari and Opera */
-}
-
-.main-content {
-    grid-column: 1/3;
-    max-height: 465px;
-}
-
-.main-content img {
-    object-fit: cover;
-    width: calc(100% - 20px);
-    max-height: 465px;
-}
-
 .list-item-bottom {
-    width: 350px;
     margin:0 0 -4px 0;
     border-left: solid 3px transparent;
     border-right: solid 3px transparent;
