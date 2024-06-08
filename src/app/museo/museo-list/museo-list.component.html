@@ -32,13 +32,13 @@
             <p>{{selectedMuseo.city}} - {{selectedMuseo.address}}</p>
         </div>
         <div class="item-relations">
-            <div *ngFor="let obra of selectedMuseo.artworks ">
-                <div class="list-image-frame">
+            <div class="relation-item" *ngFor="let obra of selectedMuseo.artworks ">
+                <div class="list-image-frame" routerLink="/artworks/{{ obra.id }}">
                     <img src="{{obra.mainImage}}" alt="{{obra.name}}" class="list-pic"/>
                 </div>
-                <a routerLink="/artworks/{{ obra.id }} ">
-                    {{ obra.name }}
-                </a>
+                <div class="list-image-titel" routerLink="/artworks/{{ obra.id }}">
+                    <h4>{{ obra.name }}</h4>
+                </div>
             </div>
         </div>
     </div>

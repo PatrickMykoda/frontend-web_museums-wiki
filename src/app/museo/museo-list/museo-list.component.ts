@@ -41,9 +41,13 @@ export class MuseoListComponent implements OnInit {
   setArtworkFrames(){
     setTimeout(() => {
       let artworkFrames = Array.from(document.getElementsByClassName('list-image-frame'));
+      let currentRandomNum = 0;
       artworkFrames.forEach(element => {
         let randomNum = Math.floor(Math.random() * 9) + 1;
-        console.log("Random number: ",randomNum)
+        while (randomNum === currentRandomNum){
+          randomNum = Math.floor(Math.random() * 9) + 1;
+        }
+        currentRandomNum = randomNum;
         element.classList.add('frame'+randomNum.toString());
       });
     }, 50);

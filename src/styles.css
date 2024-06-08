@@ -148,11 +148,19 @@ caption {
     justify-items: center;
 }
 
+.relation-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .list-image-frame {
     position: relative;
     width: fit-content;
     height: fit-content;
     filter: drop-shadow(-2px 5px 5px grey);
+    cursor: pointer;
 }
 
 .list-pic {
@@ -297,3 +305,10 @@ caption {
 }
 /*------------------------------*/
 
+.list-image-titel {
+    cursor: pointer;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
