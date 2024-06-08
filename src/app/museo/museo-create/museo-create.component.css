@@ -1,6 +1,6 @@
 .container {
     padding: 0;
-    background-image: url(./../../../assets/frame1-square.png);
+    background-image: url(./../../../assets/frame1.png);
     background-size: 100% 100%;
     animation: picture-roll 20s linear infinite;
 }
@@ -13,34 +13,34 @@ form {
 
 @keyframes picture-roll {
     0% {
-        background-image: url(./../../../assets/frame1-square.png);
+        background-image: url(./../../../assets/frame1.png);
     }
     10% {
-        background-image: url(./../../../assets/frame2-horizontal.png);
+        background-image: url(./../../../assets/frame2.png);
     }
     20% {
-        background-image: url(./../../../assets/frame3-horizontal.jpg);
+        background-image: url(./../../../assets/frame3.png);
     }
     30% {
-        background-image: url(./../../../assets/frame4-horizontal.png);
+        background-image: url(./../../../assets/frame4.png);
     }
     40% {
-        background-image: url(./../../../assets/frame5-horizontal.jpg);
+        background-image: url(./../../../assets/frame5.png);
     }
     50% {
-        background-image: url(./../../../assets/frame6-horizontal.jpg);
+        background-image: url(./../../../assets/frame6.png);
     }
     60% {
-        background-image: url(./../../../assets/frame7-horizontal.png);
+        background-image: url(./../../../assets/frame7.png);
     }
     70% {
-        background-image: url(./../../../assets/frame8-vertical.png);
+        background-image: url(./../../../assets/frame8.png);
     }
     80% {
-        background-image: url(./../../../assets/frame9-vertical.jpg);
+        background-image: url(./../../../assets/frame9.png);
     }
     90% {
-        background-image: url(./../../../assets/frame10-horizontal.jpg);
+        background-image: url(./../../../assets/frame10.png);
     }
 }
 

@@ -144,24 +144,15 @@ caption {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
 }
 
 .list-image-frame {
     position: relative;
     width: fit-content;
     height: fit-content;
-}
-
-.list-image-frame::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url(./assets/frame1-square.png);
-    background-size: 100% 100%;
-    z-index: 1;
+    filter: drop-shadow(-2px 5px 5px grey);
 }
 
 .list-pic {
@@ -170,4 +161,139 @@ caption {
     padding: 15px;
     max-width: 250px;
     max-height: 250px;
+    background: transparent;
 }
+
+/*------------------------------*/
+/* Random frames for list items */
+.frame1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame1.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame2.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame3.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame4.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame5::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame5.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame6::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame6.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame7::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame7.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame8::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame8.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame9::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame9.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.frame10::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/frame10.png);
+    background-size: 100% 100%;
+    z-index: 1;
+    border-radius: 3px;
+}
+/*------------------------------*/
+
