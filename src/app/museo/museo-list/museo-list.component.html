@@ -25,13 +25,16 @@
             </table>
         </div>
         <div class="item-name-and-description">
-            <h2 class="item-name">{{selectedMuseo.name}}</h2>
+            <h1 class="item-name">{{selectedMuseo.name}}</h1>
             <p class="item-description">{{selectedMuseo.description}}</p>
         </div>
         <div class="item-location">
-            <p>{{selectedMuseo.city}} - {{selectedMuseo.address}}</p>
+            <i class="fa-solid fa-location-dot test"></i>
+            <p class="test">{{selectedMuseo.city}}</p>
+            <p class="test">{{selectedMuseo.address}}</p>
         </div>
         <div class="item-relations">
+            <h1 id="relation-description">Artworks</h1>
             <div class="relation-item" *ngFor="let obra of selectedMuseo.artworks ">
                 <div class="list-image-frame" routerLink="/artworks/{{ obra.id }}">
                     <img src="{{obra.mainImage}}" alt="{{obra.name}}" class="list-pic"/>
