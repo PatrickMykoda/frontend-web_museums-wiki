@@ -14,10 +14,12 @@
 }
 
 #sidebar {
-    width: 155px;
+    width: 165px;
     background: #2C3888;
     color: #fff;
     height: auto;
+    font-weight: 300;
+    font-size: 1.3rem;
 }
 
 #sidebar.active {
@@ -109,12 +111,13 @@ ul {
 }
 
 .dropdown-list.open {
-    height: 86px;
+    height: 100px;
 }
 
 .dropdown-item {
     background-color: #2C3888;
     color: #fff;
+    font-weight: 300;
     padding: 10px 40px;
     text-shadow: -1px 1px 0px #767fb7,
                 -2px 2px 0px #5560a5,

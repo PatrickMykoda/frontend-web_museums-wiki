@@ -4,9 +4,8 @@
     display: none; /* For Chrome, Safari and Opera */
 }
 
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 * {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Urbanist", sans-serif;
     scrollbar-width: none; /* For Firefox */
 }
 
@@ -60,6 +59,10 @@ caption {
     max-height: 465px;
     overflow-y: scroll;
     scrollbar-width: none; /* For Firefox */
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: #2C3888;
+    text-shadow: -1px 1px 0px #747db581;
 }
 
 .side-list::-webkit-scrollbar {
@@ -93,7 +96,7 @@ caption {
     justify-content: center;
     margin: 0;
     padding: 0;
-    filter: drop-shadow(0 3px 3px lightgray);
+    filter: drop-shadow(0 3px 3px #747db581);
     border-radius: 1px;
 }
 
@@ -103,6 +106,8 @@ caption {
     margin-left: 3px;
     width: calc(100% - 6px);
     height: 55px;
+    text-shadow: -1px 1px 0px #747db581,
+                -1px 2px 0px #aaaec982;
 }
 
 .list-item:hover + .list-item-bottom {
@@ -129,6 +134,12 @@ caption {
 .selected-list-item {
     border-bottom: 50px solid #2C3888;
     color: white;
+    text-shadow: -1px 1px 0px #767fb7;
+}
+
+.selected-list-item:hover {
+    text-shadow: -1px 1px 0px #767fb7,
+                -2px 2px 0px #5560a5;
 }
 
 .item-name-and-description{
