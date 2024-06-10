@@ -11,8 +11,8 @@ export class MuseoListComponent implements OnInit {
 
   constructor(private museoService: MuseoService) { }
   museos: Array<MuseoDetail> = [];
-
   selectedMuseo!: MuseoDetail;
+  intervalId: any;
 
   onSelected(museo: MuseoDetail): void {
     if (this.selectedMuseo){
@@ -21,6 +21,7 @@ export class MuseoListComponent implements OnInit {
     this.selectedMuseo = museo;
     document.getElementById(museo.id.toString())?.classList.add('selected-list-item');
     this.setArtworkFrames();
+    clearInterval(this.intervalId);
   }
 
   getMuseos() {
@@ -51,6 +52,22 @@ export class MuseoListComponent implements OnInit {
         element.classList.add('frame'+randomNum.toString());
       });
     }, 50);
+  }
+
+  browseMuseums(){
+    clearInterval(this.intervalId);
+    let i = 0;
+    this.intervalId = setInterval(() => {
+      if(i > this.museos.length - 1 || i >= 7){
+        clearInterval(this.intervalId);
+      }
+      if (this.selectedMuseo){
+        document.getElementById(this.selectedMuseo.id.toString())?.classList.remove('selected-list-item');
+      }
+      this.selectedMuseo = this.museos[i];
+      document.getElementById(this.museos[i].id.toString())?.classList.add('selected-list-item');
+      i++;
+    }, 1000);
   }
 
   ngOnInit() {
