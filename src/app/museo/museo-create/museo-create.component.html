@@ -4,6 +4,7 @@
     <!--Name-->
     <div class="text-input-container">
       <label for="name" class="text-input-label" i18n>Nombre:</label>
+      <div id="border-highlight-name" class="border-highlight"></div>
       <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
       <input novalidate id="name" class="form-control text-input" formControlName="name" placeholder="Nombre del museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
@@ -19,8 +20,9 @@
     <!--Description-->
     <div class="text-input-container">
       <label class="text-input-label" for="description" i18n>Descripción:</label>
+      <div id="border-highlight-description" class="border-highlight"></div>
       <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
-      <input novalidate id="description" class="form-control text-input" formControlName="description" placeholder="Descripción del museo" />
+      <textarea novalidate id="description" class="form-control text-input description-input" formControlName="description" placeholder="Descripción del museo"></textarea>
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         museoForm.get('description')!.hasError('required') &&
         museoForm.get('description')!.touched
@@ -32,6 +34,7 @@
     <!--Address-->
     <div class="text-input-container">
       <label class="text-input-label" for="address" i18n>Dirección:</label>
+      <div id="border-highlight-address" class="border-highlight"></div>
       <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
       <input novalidate id="address" class="form-control text-input" formControlName="address" placeholder="Dirección del museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
@@ -45,6 +48,7 @@
     <!--City-->
     <div class="text-input-container">
       <label class="text-input-label" for="city" i18n>Ciudad:</label>
+      <div id="border-highlight-city" class="border-highlight"></div>
       <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
       <input novalidate id="city" class="form-control text-input" formControlName="city" placeholder="Ciudad donde se ubica el museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
@@ -58,6 +62,7 @@
     <!--Image-->
     <div class="text-input-container">
       <label class="text-input-label" for="image" i18n>Imagen:</label>
+      <div id="border-highlight-image" class="border-highlight"></div>
       <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
       <input novalidate id="image" class="form-control text-input" formControlName="image" placeholder="Ciudad donde se ubica el museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
