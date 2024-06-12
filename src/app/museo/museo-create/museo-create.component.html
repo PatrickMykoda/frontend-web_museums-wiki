@@ -1,10 +1,11 @@
-<div id="create-museo-container" class="container">
-  <form [formGroup]="museoForm" (ngSubmit)="!museoForm.invalid && createMuseo(museoForm.value)">
-    <h2 class="text-center" i18n>Nuevo Museo</h2>
+<div id="create-museo-container" class="create-form-container">
+  <form [formGroup]="museoForm" (ngSubmit)="!museoForm.invalid && createMuseo(museoForm.value)" class="create-form">
+    <h2 class="text-center form-title" i18n>Agrega un museo y ayuda a ampliar la comunidad</h2>
     <!--Name-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="name" i18n>Nombre</label>
-      <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre del museo" />
+    <div class="text-input-container">
+      <label for="name" class="text-input-label" i18n>Nombre:</label>
+      <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
+      <input novalidate id="name" class="form-control text-input" formControlName="name" placeholder="Nombre del museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         museoForm.get('name')!.hasError('required') &&
         museoForm.get('name')!.touched" i18n>
@@ -16,9 +17,10 @@
     </div>
 
     <!--Description-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="description" i18n>Descripción</label>
-      <input novalidate id="description" class="form-control" formControlName="description" i18n-placeholder placeholder="Descripción del museo" />
+    <div class="text-input-container">
+      <label class="text-input-label" for="description" i18n>Descripción:</label>
+      <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
+      <input novalidate id="description" class="form-control text-input" formControlName="description" placeholder="Descripción del museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         museoForm.get('description')!.hasError('required') &&
         museoForm.get('description')!.touched
@@ -28,9 +30,10 @@
     </div>
 
     <!--Address-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="address" i18n>Dirección</label>
-      <input novalidate id="address" class="form-control" formControlName="address" i18n-placeholder placeholder="Dirección del museo" />
+    <div class="text-input-container">
+      <label class="text-input-label" for="address" i18n>Dirección:</label>
+      <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
+      <input novalidate id="address" class="form-control text-input" formControlName="address" placeholder="Dirección del museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         museoForm.get('address')!.hasError('required') &&
         museoForm.get('address')!.touched
@@ -40,9 +43,10 @@
     </div>
 
     <!--City-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="city" i18n>Ciudad</label>
-      <input novalidate id="city" class="form-control" formControlName="city" i18n-placeholder placeholder="Ciudad donde se ubica el museo" />
+    <div class="text-input-container">
+      <label class="text-input-label" for="city" i18n>Ciudad:</label>
+      <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
+      <input novalidate id="city" class="form-control text-input" formControlName="city" placeholder="Ciudad donde se ubica el museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         museoForm.get('city')!.hasError('required') &&
         museoForm.get('city')!.touched
@@ -52,9 +56,10 @@
     </div>
 
     <!--Image-->
-    <div class="form-group mx-sm-3 mb-2">
-      <label for="image" i18n>Imagen</label>
-      <input novalidate id="image" class="form-control" formControlName="image" i18n-placeholder placeholder="URL con imagen del museo" />
+    <div class="text-input-container">
+      <label class="text-input-label" for="image" i18n>Imagen:</label>
+      <span class="input-pseudo-span"><i class="fa-solid fa-pen-fancy pen-icon"></i></span>
+      <input novalidate id="image" class="form-control text-input" formControlName="image" placeholder="Ciudad donde se ubica el museo" />
       <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         museoForm.get('image')!.hasError('required') &&
         museoForm.get('image')!.touched
@@ -63,12 +68,19 @@
       </div>
     </div>
 
-    <button type="submit" class="btn btn-primary" [disabled]="!museoForm.valid" i18n>
-      Crear
-    </button>
-    <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
-      Cancelar
-    </button>
-    <button id="btn-animation"><i id="animation-icon" class="fa-solid fa-circle-pause animation-control"></i><span>Animation</span></button>
+    <!--Submit % Cancel Buttons-->
+    <div class="form-button-container">
+      <div class="submit-button-container">
+        <button type="submit" class="submit-button" [disabled]="!museoForm.valid" i18n>
+          Crear
+        </button>
+      </div>
+      <div class="cancel-button-container">
+        <button type="button" class="cancel-button" (click)="cancelCreation()" i18n>
+          Cancelar
+        </button>
+      </div>
+    </div>
+    <button id="btn-animation-create-museums" class="btn-animation"><i id="animation-icon-create-museums" class="fa-solid fa-circle-pause animation-control"></i><span>Animation</span></button>
   </form>
 </div>

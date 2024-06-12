@@ -30,27 +30,28 @@ export class MuseoCreateComponent implements OnInit {
       address: ["", Validators.required],
       city: ["", Validators.required],
       image: ["", Validators.required]
-  })
-  this.animationOn = true;
-  this.animationButton = document.getElementById('btn-animation')!;
-  this.animationButton.addEventListener('click', () => this.toggleAnimation());
-}
+    })
+    this.animationOn = true;
+    this.animationButton = document.getElementById('btn-animation-create-museums')!;
+    this.animationButton.addEventListener('click', () => this.toggleAnimation());
+    this.setEditIcon();
+  }
 
   createMuseo(museo: Museo){
     this.museoService.createMuseo(museo).subscribe(museo=>{
     console.info("El museo ha sido creado: ", museo)
     this.toastr.success("Confirmación", "Museo creado")
     this.museoForm.reset();
-  });
-}
+    });
+  }
 
   cancelCreation(){
     this.museoForm.reset();
-}
+  }
 
   toggleAnimation(){
     this.container = document.getElementById('create-museo-container')!;
-    this.animationIcon = document.getElementById('animation-icon')!;
+    this.animationIcon = document.getElementById('animation-icon-create-museums')!;
 
     if(this.animationOn){
       // Code executes if the animationOn flag is true an changes the background-image to the current image of the animation
@@ -80,6 +81,17 @@ export class MuseoCreateComponent implements OnInit {
     
     this.container.classList.toggle('hide-animation');
     
+  }
+
+  setEditIcon(){
+    let placeholders = Array.from(document.getElementsByClassName('text-input'));
+    let pseudoSpans = Array.from(document.getElementsByClassName('input-pseudo-span'));
+    let i = 0;
+    placeholders.forEach(element => {
+      let placeholder = element.getAttribute('placeholder');
+      pseudoSpans[i].innerHTML = `${placeholder!} <i class="fa-solid fa-pen-fancy pen-icon"></i>`;
+      i++;
+    })
   }
 
 }
