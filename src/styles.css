@@ -433,6 +433,7 @@ caption {
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 5px;
     margin-bottom: 25px;
+    height: 45px;
 }
 
 .text-input-label {
@@ -470,32 +471,73 @@ caption {
 }
 
 .border-highlight {
+    display: none;
     grid-column: 2/7;
     grid-row: 1;
     overflow: hidden;
     background-color: transparent;
+    margin: -5px -5px -5px 5px;
 }
 
 .text-input-container:hover > .border-highlight {
-    animation: border-flash 2s ease-in;
+    display: inline;
+    animation: border-flash 1s ease-in;
 }
 
 @keyframes border-flash {
     0% {
-        margin: -1px calc(100% - 14px) 40px 14px;
-        background-color: black;
+        height: 1px;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
     }
     40% {
-        margin: -1px -1px 40px calc(100% - 60px);
+        height: 1px;
+        width: 20%;
+        margin-left: 80%;
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    41% {
+        height: 5px;
+        width: 1px;
+        margin-left: calc(100% + 4px);
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 0.4);
     }
     50% {
-        margin: 30px -1px 0px calc(100% - 10px);
+        height: 100%;
+        width: 1px;
+        margin-left: calc(100% + 4px);
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    51% {
+        height: 1px;
+        width: 1px;
+        margin-left: calc(100% + 4px);
+        margin-top: 45px;
+        background-color: rgba(0, 0, 0, 0.5);
     }
     90% {
-        margin: 40px calc(100% - 60px) 0px 14px;
+        height: 1px;
+        width: 35%;
+        margin-left: 5px;
+        margin-top: 45px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    91% {
+        height: 5px;
+        width: 1px;
+        margin-left: 5px;
+        margin-top: 40px;
+        background-color: rgba(0, 0, 0, 0.9);
     }
     100% {
-        margin: -1px calc(100% - 14px) 30px 14px;
+        height: 100%;
+        width: 1px;
+        margin-left: 5px;
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 1);
     }
 }
 
