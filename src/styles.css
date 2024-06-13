@@ -9,6 +9,10 @@
     scrollbar-width: none; /* For Firefox */
 }
 
+:root {
+    --main-color: #2C3888;
+  }
+
 .hide {
     display: none;
 }
@@ -157,7 +161,7 @@ caption {
 }
 
 .selected-list-item {
-    border-bottom: 50px solid #2C3888;
+    border-bottom: 50px solid var(--main-color);
     color: white;
     text-shadow: -1px 1px 0px #767fb7,
                 -2px 2px 0px #5560a5;
@@ -436,28 +440,45 @@ caption {
     height: 45px;
 }
 
+.description-input-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 15px;
+    height: 100px;
+}
+
 .text-input-label {
     grid-column: 1;
     grid-row: 1;
     text-align: right;
     font-size: 1.25rem;
     height: 40px;
-    margin-top: 1px;
+    margin-top: 3px;
 }
 
 
-.text-input {
+.text-input, .description-input {
     grid-column: 2/7;
     grid-row: 1;
     font-family: "La Belle Aurore", sans-serif;
     font-size: 1.25rem;
     border: none;
     width: calc(100% - 15px);
-    height: 40px;
     padding: 0 0 0 5px;
     border-radius: 0;
     margin-left: 15px;
-    background-color: white;
+    background-color: transparent;
+    resize: none;
+
+    &::placeholder{
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+.description-input {
+    height: 90px;
+    margin-top: 7px;
 }
 
 .input-pseudo-span {
@@ -482,6 +503,11 @@ caption {
 .text-input-container:hover > .border-highlight {
     display: inline;
     animation: border-flash 1s ease-in;
+}
+
+.description-input-container:hover > .border-highlight {
+    display: inline;
+    animation: border-flash-description 1s ease-in;
 }
 
 @keyframes border-flash {
@@ -541,7 +567,64 @@ caption {
     }
 }
 
-.pen-icon {
+@keyframes border-flash-description {
+    0% {
+        height: 1px;
+        width: 1px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    40% {
+        height: 1px;
+        width: 20%;
+        margin-left: 80%;
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    41% {
+        height: 5px;
+        width: 1px;
+        margin-left: calc(100% + 4px);
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        height: 100%;
+        width: 1px;
+        margin-left: calc(100% + 4px);
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    51% {
+        height: 1px;
+        width: 1px;
+        margin-left: calc(100% + 4px);
+        margin-top: 100px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    90% {
+        height: 1px;
+        width: 35%;
+        margin-left: 5px;
+        margin-top: 100px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    91% {
+        height: 5px;
+        width: 1px;
+        margin-left: 5px;
+        margin-top: 95px;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    100% {
+        height: 100%;
+        width: 1px;
+        margin-left: 5px;
+        margin-top: -5px;
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+
+.fa-pen-fancy, .fa-circle-exclamation {
     color: black;
     font-size: 1rem;
     transform: translateY(-10px);
@@ -650,7 +733,7 @@ caption {
     border: none;
     margin-right: 0;
     margin-left: auto;
-    transform: translate(10px, 25px);
+    transform: translate(10px, 15px);
 }
 
 .btn-animation:hover {
@@ -664,7 +747,7 @@ caption {
 }
 
 .btn-animation:hover > .animation-control {
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.322);
+    box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.322);
     animation: pulse 2s ease 0.2s infinite;
 }
 

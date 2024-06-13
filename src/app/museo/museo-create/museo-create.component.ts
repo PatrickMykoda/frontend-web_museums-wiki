@@ -16,6 +16,7 @@ export class MuseoCreateComponent implements OnInit {
   container!: HTMLElement;
   animationOn!: boolean;
   animationIcon!: HTMLElement;
+  warningText!: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -25,16 +26,16 @@ export class MuseoCreateComponent implements OnInit {
 
   ngOnInit() {
     this.museoForm = this.formBuilder.group({
-      name: ["", [Validators.required, Validators.minLength(2)]],
-      description: ["", [Validators.required]],
-      address: ["", Validators.required],
-      city: ["", Validators.required],
-      image: ["", Validators.required]
+      name: ["", [Validators.required, Validators.minLength(2), Validators.maxLength(50)]],
+      description: ["", [Validators.required, Validators.minLength(5), Validators.maxLength(1000)]],
+      address: ["", [Validators.required, Validators.minLength(5), Validators.maxLength(250)]],
+      city: ["", [Validators.required, Validators.minLength(2), Validators.maxLength(250)]],
+      image: ["", [Validators.required, Validators.minLength(5), Validators.maxLength(1000), Validators.pattern('(http(s?):)([/|.|\\w|\\s|-])*\\.(?:jpg|gif|png)')]],
     })
     this.animationOn = true;
     this.animationButton = document.getElementById('btn-animation-create-museums')!;
     this.animationButton.addEventListener('click', () => this.toggleAnimation());
-    this.setEditIcon();
+    this.setInputIcons();
   }
 
   createMuseo(museo: Museo){
@@ -83,15 +84,95 @@ export class MuseoCreateComponent implements OnInit {
     
   }
 
-  setEditIcon(){
-    let placeholders = Array.from(document.getElementsByClassName('text-input'));
+  setInputIcons(){
+    let inputs = Array.from(document.getElementsByClassName('input'));
     let pseudoSpans = Array.from(document.getElementsByClassName('input-pseudo-span'));
     let i = 0;
-    placeholders.forEach(element => {
+    inputs.forEach(element => {
       let placeholder = element.getAttribute('placeholder');
-      pseudoSpans[i].innerHTML = `${placeholder!} <i class="fa-solid fa-pen-fancy pen-icon"></i>`;
+      pseudoSpans[i].innerHTML = `${placeholder!} `+pseudoSpans[i].innerHTML;
+
+      // Event listener for removing the icons when the user clicks on the input
+      element.addEventListener('focus', () => {
+        let inputName = element.getAttribute('formControlName');
+        document.getElementById(`${inputName}-pen-icon`)!.classList.add('hide');
+        this.hideWarningIcon(inputName!);
+      });
+
+      // Event listener for adjusting the icon position when the user types in the input
+      /*element.addEventListener('input', () => {
+        let inputValue = (element as HTMLInputElement).value;
+        if (inputValue != ""){
+          let inputName = element.getAttribute('formControlName');
+          let pseudoSpan = document.getElementById(`${inputName}-pseudo-span`)!;
+          pseudoSpan.innerHTML = inputValue + ` <i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
+            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+        }
+      });*/
+
+      // Event listener for checking if the input is valid
+      element.addEventListener('blur', () => {
+        let inputName = element.getAttribute('formControlName');
+        let labelName = (element as HTMLInputElement).labels![0].textContent?.slice(0, -1);
+        this.adjustIconPosition(inputName!);
+        this.checkInputValid(inputName!, labelName!);
+      });
+
       i++;
     })
+  }
+
+  checkInputValid(inputName: string, labelName: string){
+    // In case there is no input in an input where it is required
+    if (this.museoForm.get(`${inputName}`)!.hasError('required')){
+      this.showWarning(inputName!, `El campo '${labelName}' es requerido`);
+    }
+    // In case there is no input in an input where it is required
+    else if (this.museoForm.get(`${inputName}`)!.hasError('minlength')){
+      this.showWarning(inputName!, `La entrada para el campo '${labelName}' es demasiado corta`);
+    }
+
+    else if (this.museoForm.get(`${inputName}`)!.hasError('maxlength')){
+      this.showWarning(inputName!, `La entrada para el campo '${labelName}' es demasiado larga`);
+    }
+
+    else if (this.museoForm.get(`${inputName}`)!.hasError('pattern')){
+      this.showWarning(inputName!, `La entrada para el campo '${labelName}' no tiene el formato correcto.`);
+    } 
+    
+    else {
+      this.warningText = "";
+    }
+  }
+
+  adjustIconPosition(inputName: string){
+    let inputElement = document.getElementById(inputName);
+    let pseudoSpan = document.getElementById(`${inputName}-pseudo-span`)!;
+    let inputValue = (inputElement as HTMLInputElement).value;
+
+    if(inputValue != ""){
+      if(inputValue.length > 50){
+        pseudoSpan.innerHTML = `<i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
+            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+      } else {
+        pseudoSpan.innerHTML = inputValue + ` <i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
+            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+      }
+    }else {
+      let placeholder = inputElement!.getAttribute('placeholder');
+      pseudoSpan.innerHTML = placeholder + ` <i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
+            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+    }
+  }
+
+  showWarning(inputName: string, warningText: string){
+    document.getElementById(`${inputName}-warning-icon`)!.classList.remove('hide');
+    this.warningText = warningText;
+    console.log("This is the warning text: ",this.warningText);
+  }
+
+  hideWarningIcon(inputName: string){
+    document.getElementById(`${inputName}-warning-icon`)!.classList.add('hide');
   }
 
 }
