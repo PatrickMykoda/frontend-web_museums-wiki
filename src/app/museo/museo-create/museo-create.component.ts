@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { Museo } from '../museo';
 import { MuseoService } from '../museo.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-museo-create',
@@ -21,7 +22,8 @@ export class MuseoCreateComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private toastr: ToastrService,
-    private museoService: MuseoService
+    private museoService: MuseoService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -43,6 +45,7 @@ export class MuseoCreateComponent implements OnInit {
     console.info("El museo ha sido creado: ", museo)
     this.toastr.success("Confirmación", "Museo creado")
     this.museoForm.reset();
+    this.router.navigate(['/museums', museo.id]);
     });
   }
 
@@ -99,17 +102,6 @@ export class MuseoCreateComponent implements OnInit {
         this.hideWarningIcon(inputName!);
       });
 
-      // Event listener for adjusting the icon position when the user types in the input
-      /*element.addEventListener('input', () => {
-        let inputValue = (element as HTMLInputElement).value;
-        if (inputValue != ""){
-          let inputName = element.getAttribute('formControlName');
-          let pseudoSpan = document.getElementById(`${inputName}-pseudo-span`)!;
-          pseudoSpan.innerHTML = inputValue + ` <i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
-            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
-        }
-      });*/
-
       // Event listener for checking if the input is valid
       element.addEventListener('blur', () => {
         let inputName = element.getAttribute('formControlName');
@@ -123,25 +115,31 @@ export class MuseoCreateComponent implements OnInit {
   }
 
   checkInputValid(inputName: string, labelName: string){
+    if(this.getWarningText(inputName, labelName) != ""){
+      this.showWarning(inputName!, labelName!);
+    }
+  }
+
+  getWarningText(inputName: string, labelName: string){
     // In case there is no input in an input where it is required
     if (this.museoForm.get(`${inputName}`)!.hasError('required')){
-      this.showWarning(inputName!, `El campo '${labelName}' es requerido`);
+      return `El campo '${labelName}' es requerido`;
     }
     // In case there is no input in an input where it is required
     else if (this.museoForm.get(`${inputName}`)!.hasError('minlength')){
-      this.showWarning(inputName!, `La entrada para el campo '${labelName}' es demasiado corta`);
+      return `La entrada para el campo '${labelName}' es demasiado corta`;
     }
 
     else if (this.museoForm.get(`${inputName}`)!.hasError('maxlength')){
-      this.showWarning(inputName!, `La entrada para el campo '${labelName}' es demasiado larga`);
+      return `La entrada para el campo '${labelName}' es demasiado larga`;
     }
 
     else if (this.museoForm.get(`${inputName}`)!.hasError('pattern')){
-      this.showWarning(inputName!, `La entrada para el campo '${labelName}' no tiene el formato correcto.`);
+      return `La entrada para el campo '${labelName}' no tiene el formato correcto.`;
     } 
     
     else {
-      this.warningText = "";
+      return "";
     }
   }
 
@@ -165,14 +163,18 @@ export class MuseoCreateComponent implements OnInit {
     }
   }
 
-  showWarning(inputName: string, warningText: string){
-    document.getElementById(`${inputName}-warning-icon`)!.classList.remove('hide');
-    this.warningText = warningText;
-    console.log("This is the warning text: ",this.warningText);
+  showWarning(inputName: string, labelName: string){
+    let warningIcon = document.getElementById(`${inputName}-warning-icon`)!;
+    warningIcon.classList.remove('hide');
+    warningIcon.addEventListener('click ', () => {
+      this.warningText = this.getWarningText(inputName, labelName);
+      document.getElementById('create-museum-warning')!.classList.remove('hide');
+    });
   }
 
   hideWarningIcon(inputName: string){
     document.getElementById(`${inputName}-warning-icon`)!.classList.add('hide');
   }
+  
 
 }
