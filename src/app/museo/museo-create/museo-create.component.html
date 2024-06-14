@@ -97,3 +97,11 @@
     <button id="btn-animation-create-museums" class="btn-animation"><i id="animation-icon-create-museums" class="fa-solid fa-circle-pause animation-control"></i><span>Animation</span></button>
   </form>
 </div>
+<div class="warning-container hide">
+  <div class="warning">
+    <p>{{warningText}}</p>
+    <div class="close-button-container">
+      <button class="close-button" (click)="closeWarning()">Ok</button>
+    </div>
+  </div>
+</div>

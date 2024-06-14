@@ -170,11 +170,18 @@ export class MuseoCreateComponent implements OnInit {
   }
   
   handleWarningIconClick(inputName: string){
-    console.log("This is the warning icon handler");
     let inputElement = document.getElementById(inputName);
     let labelName = (inputElement as HTMLInputElement).labels![0].textContent?.slice(0, -1)!;
-    let warningText = this.getWarningText(inputName, labelName);
-    console.log("This is the warning text: ", warningText);
+    this.warningText = this.getWarningText(inputName, labelName);
+    console.log("This is the warning text: ", this.warningText);
+    let warningElement = document.getElementsByClassName('warning-container')[0] as HTMLElement;
+    console.log("This is the warning element: ", warningElement);
+    warningElement.classList.remove('hide');
+  }
+
+  closeWarning(){
+    let warningElement = document.getElementsByClassName('warning-container')[0] as HTMLElement;
+    warningElement.classList.add('hide');
   }
 
 }

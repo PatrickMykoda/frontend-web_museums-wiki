@@ -775,15 +775,72 @@ caption {
 
 .warning-container {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    display: none;
-    background: radial-gradient(circle, rgba(0,0,0,0.8997724089635855) 10%, rgba(255,255,255,0) 100%);
+    top: 20%;
+    right: 30%;
+    bottom: 20%;
+    left: 30%;
+    background: white;
+    box-shadow: -15px 15px 15px black;
 }
 
 .warning {
-    margin: 40% 40%;
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background: url(./assets/scream-in-frame.png);
+    background-size: 100% 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 9%;
+}
+
+.warning > p {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-left: 5%;
+}
+
+.close-button-container {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    background: url(./assets/create-splash-round.png);
+    background-size: 100% 100%;
+}
+
+.close-button-container:has(.close-button:hover) {
+    background: url(./assets/create-splash.png);
+    background-size: 100% 100%;
+}
+
+.close-button {
+    background: transparent;
+    border: none;
+    height: 60px;
+    width: 69px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.705),
+              10px 10px 5px rgba(0, 0, 0, 0.523),
+              -10px 10px 5px rgba(0, 0, 0, 0.379);
+    cursor: pointer;
+    margin-bottom: 7%;
+    margin-left: 10%;
+}
+
+.close-button:active {
+    font-size: 1.15rem;
+    margin-bottom: 9%;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.4);
 }
 
 /*||||||||||||||||||||||||||||||||||||||*/
