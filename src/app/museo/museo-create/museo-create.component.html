@@ -5,10 +5,15 @@
     <div class="text-input-container">
       <label for="name" class="text-input-label" i18n>Nombre:</label>
       <div id="border-highlight-name" class="border-highlight"></div>
-      <span id="name-pseudo-span" class="input-pseudo-span">
-        <i id="name-pen-icon" class="fa-solid fa-pen-fancy"></i>
-        <i id="name-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>
-      </span>
+      <div class="input-pseudo-span-container">
+        <span id="name-pseudo-span" class="input-pseudo-span"></span>
+        <div id="name-pen-icon" class="edit-icon-wrapper">
+          <i class="fa-solid fa-pen-fancy"></i>
+        </div>
+        <div id="name-warning-icon" class="warning-icon-wrapper hide" (click)="handleWarningIconClick('name')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+      </div>
       <input novalidate id="name" class="form-control text-input input" formControlName="name" placeholder="Nombre del museo" maxlength="50"/>
     </div>
 
@@ -16,10 +21,15 @@
     <div class="text-input-container">
       <label class="text-input-label" for="address" i18n>Dirección:</label>
       <div id="border-highlight-address" class="border-highlight"></div>
-      <span id="address-pseudo-span" class="input-pseudo-span">
-        <i id="address-pen-icon" class="fa-solid fa-pen-fancy pen-icon"></i>
-        <i id="address-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>
-      </span>
+      <div class="input-pseudo-span-container">
+        <span id="address-pseudo-span" class="input-pseudo-span"></span>
+        <div id="address-pen-icon" class="edit-icon-wrapper">
+          <i class="fa-solid fa-pen-fancy"></i>
+        </div>
+        <div id="address-warning-icon" class="warning-icon-wrapper hide" (click)="handleWarningIconClick('address')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+      </div>
       <input novalidate id="address" class="form-control text-input input" formControlName="address" placeholder="Dirección del museo" maxlength="250"/>
     </div>
 
@@ -27,10 +37,15 @@
     <div class="text-input-container">
       <label class="text-input-label" for="city" i18n>Ciudad:</label>
       <div id="border-highlight-city" class="border-highlight"></div>
-      <span id="city-pseudo-span" class="input-pseudo-span">
-        <i id="city-pen-icon" class="fa-solid fa-pen-fancy pen-icon"></i>
-        <i id="city-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>
-      </span>
+      <div class="input-pseudo-span-container">
+        <span id="city-pseudo-span" class="input-pseudo-span"></span>
+        <div id="city-pen-icon" class="edit-icon-wrapper">
+          <i class="fa-solid fa-pen-fancy"></i>
+        </div>
+        <div id="city-warning-icon" class="warning-icon-wrapper hide" (click)="handleWarningIconClick('city')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+      </div>
       <input novalidate id="city" class="form-control text-input input" formControlName="city" placeholder="Ciudad donde se ubica el museo" maxlength="250"/>
     </div>
 
@@ -38,10 +53,15 @@
     <div class="text-input-container">
       <label class="text-input-label" for="image" i18n>Imagen:</label>
       <div id="border-highlight-image" class="border-highlight"></div>
-      <span id="image-pseudo-span" class="input-pseudo-span">
-        <i id="image-pen-icon" class="fa-solid fa-pen-fancy pen-icon"></i>
-        <i id="image-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>
-      </span>
+      <div class="input-pseudo-span-container">
+        <span id="image-pseudo-span" class="input-pseudo-span"></span>
+        <div id="image-pen-icon" class="edit-icon-wrapper">
+          <i class="fa-solid fa-pen-fancy"></i>
+        </div>
+        <div id="image-warning-icon" class="warning-icon-wrapper hide" (click)="handleWarningIconClick('image')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+      </div>
       <input novalidate id="image" class="form-control text-input input" formControlName="image" placeholder="Ciudad donde se ubica el museo" maxlength="1000"/>
     </div>
 
@@ -49,10 +69,15 @@
     <div class="description-input-container">
       <label class="text-input-label" for="description" i18n>Descripción:</label>
       <div id="border-highlight-description" class="border-highlight"></div>
-      <span id="description-pseudo-span" class="input-pseudo-span">
-        <i id="description-pen-icon" class="fa-solid fa-pen-fancy pen-icon"></i>
-        <i id="description-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>
-      </span>
+      <div class="input-pseudo-span-container">
+        <span id="description-pseudo-span" class="input-pseudo-span"></span>
+        <div id="description-pen-icon" class="edit-icon-wrapper">
+          <i class="fa-solid fa-pen-fancy"></i>
+        </div>
+        <div id="description-warning-icon" class="warning-icon-wrapper hide" (click)="handleWarningIconClick('description')">
+          <i class="fa-solid fa-circle-exclamation"></i>
+        </div>
+      </div>
       <textarea novalidate id="description" class="form-control description-input input" formControlName="description" placeholder="Descripción del museo" maxlength="1000"></textarea>
     </div>
 

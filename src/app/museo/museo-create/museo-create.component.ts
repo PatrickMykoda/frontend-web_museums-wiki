@@ -89,11 +89,11 @@ export class MuseoCreateComponent implements OnInit {
 
   setInputIcons(){
     let inputs = Array.from(document.getElementsByClassName('input'));
-    let pseudoSpans = Array.from(document.getElementsByClassName('input-pseudo-span'));
+    let pseudoSpans = Array.from(document.getElementsByClassName('input-pseudo-span')) as HTMLElement[];
     let i = 0;
     inputs.forEach(element => {
-      let placeholder = element.getAttribute('placeholder');
-      pseudoSpans[i].innerHTML = `${placeholder!} `+pseudoSpans[i].innerHTML;
+      let placeholder = element.getAttribute('placeholder')!;
+      pseudoSpans[i].innerText = placeholder;
 
       // Event listener for removing the icons when the user clicks on the input
       element.addEventListener('focus', () => {
@@ -116,7 +116,7 @@ export class MuseoCreateComponent implements OnInit {
 
   checkInputValid(inputName: string, labelName: string){
     if(this.getWarningText(inputName, labelName) != ""){
-      this.showWarning(inputName!, labelName!);
+      this.showWarningIcon(inputName!);
     }
   }
 
@@ -150,31 +150,31 @@ export class MuseoCreateComponent implements OnInit {
 
     if(inputValue != ""){
       if(inputValue.length > 50){
-        pseudoSpan.innerHTML = `<i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
-            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+        pseudoSpan.innerText = "";
       } else {
-        pseudoSpan.innerHTML = inputValue + ` <i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
-            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+        pseudoSpan.innerText = inputValue;
       }
     }else {
-      let placeholder = inputElement!.getAttribute('placeholder');
-      pseudoSpan.innerHTML = placeholder + ` <i id="${inputName}-pen-icon" class="fa-solid fa-pen-fancy hide"></i>
-            <i id="${inputName}-warning-icon" class="fa-solid fa-circle-exclamation hide"></i>`;
+      let placeholder = inputElement!.getAttribute('placeholder')!;
+      pseudoSpan.innerText = placeholder;
     }
   }
 
-  showWarning(inputName: string, labelName: string){
+  showWarningIcon(inputName: string){
     let warningIcon = document.getElementById(`${inputName}-warning-icon`)!;
     warningIcon.classList.remove('hide');
-    warningIcon.addEventListener('click ', () => {
-      this.warningText = this.getWarningText(inputName, labelName);
-      document.getElementById('create-museum-warning')!.classList.remove('hide');
-    });
   }
 
   hideWarningIcon(inputName: string){
     document.getElementById(`${inputName}-warning-icon`)!.classList.add('hide');
   }
   
+  handleWarningIconClick(inputName: string){
+    console.log("This is the warning icon handler");
+    let inputElement = document.getElementById(inputName);
+    let labelName = (inputElement as HTMLInputElement).labels![0].textContent?.slice(0, -1)!;
+    let warningText = this.getWarningText(inputName, labelName);
+    console.log("This is the warning text: ", warningText);
+  }
 
 }

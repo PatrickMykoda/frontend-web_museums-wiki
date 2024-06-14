@@ -486,14 +486,28 @@ caption {
     margin-top: 7px;
 }
 
-.input-pseudo-span {
+.input-pseudo-span-container{
     grid-column: 2/7;
     grid-row: 1;
+    grid-gap: 5px;
+    display: flex;
+}
+.input-pseudo-span {
     font-family: "La Belle Aurore", sans-serif;
     font-size: 1.25rem;
     background: transparent;
     color: transparent;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+.edit-icon-wrapper, .warning-icon-wrapper {
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    transform: translateY(-8px);
 }
 
 .border-highlight {
@@ -627,14 +641,6 @@ caption {
         margin-top: -5px;
         background-color: rgba(0, 0, 0, 1);
     }
-}
-
-.fa-pen-fancy, .fa-circle-exclamation {
-    color: black;
-    font-size: 1rem;
-    transform: translateY(-10px);
-    margin-left: 5px;
-    cursor: pointer;
 }
 
 
