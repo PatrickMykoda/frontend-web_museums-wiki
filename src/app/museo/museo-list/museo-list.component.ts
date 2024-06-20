@@ -22,6 +22,7 @@ export class MuseoListComponent implements OnInit {
     document.getElementById(museo.id.toString())?.classList.add('selected-list-item');
     this.setArtworkFrames();
     clearInterval(this.intervalId);
+    console.log(museo.id);
   }
 
   getMuseos() {

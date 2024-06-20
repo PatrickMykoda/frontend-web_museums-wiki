@@ -31,7 +31,7 @@ caption {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.list-description{
+.list-description {
     grid-column: 1/3;
     grid-row: 1;
     z-index: 2;
@@ -193,11 +193,6 @@ caption {
     background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,1) 26%), url("https://live.staticflickr.com/6198/6052194802_97692440b6_b.jpg");
 }
 
-.test {
-    padding: 2px;
-    margin: 0;
-}
-
 .item-relations {
     grid-column: 1/4;
     display: grid;
@@ -207,6 +202,92 @@ caption {
     justify-items: center;
     text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
 }
+
+/*||||||||||||||||||||||||||||||||||||||*/
+/*|||||||Styles for detail pages||||||||*/
+/*||||||||||||||||||||||||||||||||||||||*/
+
+.detail-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.detail-title {
+    grid-column: 1/3;
+    grid-row: 1;
+    z-index: 2;
+    width: calc(100% - 10px);
+    padding: 15px 50% 0 20px;
+    color: white;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.4),
+              10px 10px 5px rgba(0,0,0,0.3),
+              -10px 10px 5px rgba(0, 0, 0, 0.2);
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0,0,0,0.0.6) 0%, rgba(0,0,0,0) 100%);
+}
+
+.detail-image {
+    grid-column: 1/3;
+    grid-row: 1;
+    z-index: 1;
+    max-height: 465px;
+}
+
+.detail-image img {
+    object-fit: cover;
+    height: 465px;
+    width: calc(100% - 10px);
+    background-image: url('./assets/placeholder-museum.png');
+    background-size: contain;
+}
+
+.detail-side-info {
+    grid-column: 3;
+    grid-row: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    max-height: 465px;
+    font-weight: 300;
+    color: black;
+}
+
+.detail-description{
+    font-size: 1.2rem;
+    text-shadow: none;
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.detail-location{
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,1) 26%), url("https://live.staticflickr.com/6198/6052194802_97692440b6_b.jpg");
+}
+
+.detail-relations {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2);
+    margin-top: 25px;
+}
+
+/*||||||||||||||||||||||||||||||||||||||*/
+/*||||||||||||||||||||||||||||||||||||||*/
+
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||Styles for relations lists with frames||||||*/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
 .relation-item{
     display: flex;
@@ -372,6 +453,10 @@ caption {
     text-decoration: none;
     outline: none;
 }
+
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||*/
+/*|||||||||||||||||||||||||||||||||||||||||||||||||||*/
 
 
 /*||||||||||||||||||||||||||||||||||||||*/
@@ -845,4 +930,4 @@ caption {
 
 /*||||||||||||||||||||||||||||||||||||||*/
 /*||||||||||||||||||||||||||||||||||||||*/
-
+/*||||||||||||||||||||||||||||||||||||||*/

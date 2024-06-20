@@ -1,4 +1,38 @@
-<div class="container-fluid">
+<div class="main-container">
+    <div class="detail-container">
+        <div class="detail-title">
+            <h1>{{ museoDetail.name }}</h1>
+        </div>
+        <div class="detail-image">
+            <div>
+                <img src="{{ museoDetail.image }}" />
+            </div>
+        </div>
+        <div class="detail-side-info">
+            <div class="detail-description">
+                <p id="museum-description-text">{{museoDetail.description}}</p>
+            </div>
+            <div class="detail-location">
+                <i class="fa-solid fa-location-dot test"></i>
+                <p>{{ museoDetail.city }}</p>
+                <p>{{ museoDetail.address }}</p>
+            </div>
+        </div>
+        <div class="detail-relations">
+            <h1 id="relation-description">Obras</h1>
+            <div class="relation-item" *ngFor="let artwork of museoDetail.artworks ">
+                <div class="list-image-frame" routerLink="/artworks/{{ artwork.id }}">
+                    <img src="{{artwork.mainImage}}" alt="{{artwork.name}}" class="list-pic"/>
+                </div>
+                <div class="list-image-titel" routerLink="/artworks/{{ artwork.id }}">
+                    <h4>{{ artwork.name }}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<div class="container-fluid">
     <div class="row">
         <div class="col3">
             <dl>
@@ -22,4 +56,4 @@
             </dl>
         </div>
     </div>
-</div>
+</div>-->
