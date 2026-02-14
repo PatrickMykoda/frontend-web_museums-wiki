@@ -103,9 +103,9 @@ ul {
         transform: scale(1.1);
     } 33% {
         transform: scale(1.3);
-        box-shadow: -1px 1px 0px #747db581,
-                -3px 3px 0px #aaaec982,
-                -5px 5px 0px #e2e3ec80;
+        filter: drop-shadow(-1px 1px 0px #747db581)
+                drop-shadow(-2px 2px 0px #aaaec982)
+                drop-shadow(-3px 3px 0px #e2e3ec80);
     } 100% {
         transform: scale(1.0);
     }
@@ -141,17 +141,16 @@ ul {
 }
 
 .dropdown-icon {
-    box-shadow: -1px 1px 0px #767fb7,
-            -2px 2px 0px #5560a5,
-            -3px 3px 0px #3e4a94;
-    border-radius: 2px;
+    filter: drop-shadow(-1px 1px 0px #767fb7)
+            drop-shadow(-2px 2px 0px #5560a5)
+            drop-shadow(-3px 3px 0px #3e4a94);
     margin-right: 10px;
 }
 
 .dropdown-item:hover > .dropdown-icon {
-    box-shadow: -1px 1px 0px #747db581,
-                -2px 2px 0px #aaaec982,
-                -3px 3px 0px #e2e3ec80;
+    filter: drop-shadow(-1px 1px 0px #747db581)
+            drop-shadow(-2px 2px 0px #aaaec982)
+            drop-shadow(-3px 3px 0px #e2e3ec80);
     animation: pulse 2s ease 0.2s infinite;
 }
 
