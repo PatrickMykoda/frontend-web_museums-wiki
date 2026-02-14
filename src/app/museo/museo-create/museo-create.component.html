@@ -1,9 +1,9 @@
 <div id="create-museo-container" class="create-form-container">
   <form [formGroup]="museoForm" (ngSubmit)="!museoForm.invalid && createMuseo(museoForm.value)" class="create-form">
-    <h2 class="text-center form-title" i18n>Agrega un museo y ayuda a ampliar la comunidad</h2>
+    <h2 class="text-center form-title">Add a museum and help expand the community</h2>
     <!--Name-->
     <div class="text-input-container">
-      <label for="name" class="text-input-label" i18n>Nombre:</label>
+      <label for="name" class="text-input-label">Name:</label>
       <div id="border-highlight-name" class="border-highlight"></div>
       <div class="input-pseudo-span-container">
         <span id="name-pseudo-span" class="input-pseudo-span"></span>
@@ -19,7 +19,7 @@
 
     <!--Address-->
     <div class="text-input-container">
-      <label class="text-input-label" for="address" i18n>Dirección:</label>
+      <label class="text-input-label" for="address">Address:</label>
       <div id="border-highlight-address" class="border-highlight"></div>
       <div class="input-pseudo-span-container">
         <span id="address-pseudo-span" class="input-pseudo-span"></span>
@@ -35,7 +35,7 @@
 
     <!--City-->
     <div class="text-input-container">
-      <label class="text-input-label" for="city" i18n>Ciudad:</label>
+      <label class="text-input-label" for="city">City:</label>
       <div id="border-highlight-city" class="border-highlight"></div>
       <div class="input-pseudo-span-container">
         <span id="city-pseudo-span" class="input-pseudo-span"></span>
@@ -51,7 +51,7 @@
 
     <!--Image-->
     <div class="text-input-container">
-      <label class="text-input-label" for="image" i18n>Imagen:</label>
+      <label class="text-input-label" for="image">Image:</label>
       <div id="border-highlight-image" class="border-highlight"></div>
       <div class="input-pseudo-span-container">
         <span id="image-pseudo-span" class="input-pseudo-span"></span>
@@ -67,7 +67,7 @@
 
     <!--Description-->
     <div class="description-input-container">
-      <label class="text-input-label" for="description" i18n>Descripción:</label>
+      <label class="text-input-label" for="description">Description:</label>
       <div id="border-highlight-description" class="border-highlight"></div>
       <div class="input-pseudo-span-container">
         <span id="description-pseudo-span" class="input-pseudo-span"></span>
@@ -84,13 +84,13 @@
     <!--Submit % Cancel Buttons-->
     <div class="form-button-container">
       <div class="submit-button-container">
-        <button type="submit" class="submit-button" [disabled]="!museoForm.valid" i18n>
-          Crear
+        <button type="submit" class="submit-button" [disabled]="!museoForm.valid">
+          Create
         </button>
       </div>
       <div class="cancel-button-container">
-        <button type="button" class="cancel-button" (click)="cancelCreation()" i18n>
-          Cancelar
+        <button type="button" class="cancel-button" (click)="cancelCreation()">
+          Cancel
         </button>
       </div>
     </div>

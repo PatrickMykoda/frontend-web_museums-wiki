@@ -10,15 +10,6 @@
                     "strict": true
                 }
             },
-            "i18n": {
-                "sourceLocale": "es",
-                "locales": {
-                    "en": {
-                        "translation": "src/locale/messages.en.xlf",
-                        "baseHref": ""
-                    }
-                }
-            },
             "root": "",
             "sourceRoot": "src",
             "prefix": "app",
@@ -46,22 +37,9 @@
                             "node_modules/bootstrap/dist/js/bootstrap.min.js",
                             "node_modules/@fortawesome/fontawesome-free/js/all.js"
                         ],
-                        "localize": true,
                         "aot": true
                     },
                     "configurations": {
-                        "en": {
-                            "localize": [
-                                "en"
-                            ],
-                            "outputPath": "dist/museums-front-en/",
-                            "i18nMissingTranslation": "error"
-                        },
-                        "es": {
-                            "localize": [
-                                "es"
-                            ]
-                        },
                         "production": {
                             "budgets": [{
                                     "type": "initial",
@@ -108,12 +86,6 @@
                         }
                     },
                     "defaultConfiguration": "development"
-                },
-                "extract-i18n": {
-                    "builder": "@angular-devkit/build-angular:extract-i18n",
-                    "options": {
-                        "browserTarget": "museums-front:build"
-                    }
                 },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",

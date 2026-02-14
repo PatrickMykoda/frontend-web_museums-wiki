@@ -1,10 +1,10 @@
 <div class="main-container">
     <div class="list-container">
         <div class="list-description">
-            <h1>Encuentra algunos de los museos mas historicos del mundo</h1>
+            <h1>Discover some of the most historic museums in the world</h1>
         </div>
         <div class="side-list-hint">
-            <p (click)="browseMuseums()">Browse Museos <i id="animation-icon" class="fa-solid fa-caret-right animation-control"></i></p>
+            <p (click)="browseMuseums()">Browse Museums <i id="animation-icon" class="fa-solid fa-caret-right animation-control"></i></p>
         </div>
         <div class="item-image">
             <div>
@@ -34,7 +34,7 @@
             <p class="test">{{selectedMuseo.address}}</p>
         </div>
         <div class="item-relations">
-            <h1 id="relation-description">Obras</h1>
+            <h1 id="relation-description">Artworks</h1>
             <div class="relation-item" *ngFor="let obra of selectedMuseo.artworks ">
                 <div class="list-image-frame" routerLink="/artworks/{{ obra.id }}">
                     <img src="{{obra.mainImage}}" alt="{{obra.name}}" class="list-pic"/>

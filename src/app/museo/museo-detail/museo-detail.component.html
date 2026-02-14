@@ -19,7 +19,7 @@
             </div>
         </div>
         <div class="detail-relations">
-            <h1 id="relation-description">Obras</h1>
+            <h1 id="relation-description">Artworks</h1>
             <div class="relation-item" *ngFor="let artwork of museoDetail.artworks ">
                 <div class="list-image-frame" routerLink="/artworks/{{ artwork.id }}">
                     <img src="{{artwork.mainImage}}" alt="{{artwork.name}}" class="list-pic"/>
@@ -39,14 +39,14 @@
                 <dd>
                     <img class="img-fluid" src="{{ museoDetail.image }}" alt="{{ museoDetail.name }}" />
                 </dd>
-                <dt class="bold" i18n>Descripción</dt>
+                <dt class="bold">Description</dt>
                 <dd>{{ museoDetail.description }}</dd>
                 <hr />
-                <dt class="bold" i18n>Dirección y ubicación en GoogleMaps</dt>
+                <dt class="bold">Address and location on GoogleMaps</dt>
                 <dd>{{ museoDetail.address }}</dd>
-                <dt class="bold" i18n>Exhibiciones</dt>
-                <dd class="caption"><a routerLink="/exhibiciones/list" i18n>Ver Exhibiciones</a></dd>
-                <dt i18n>Obras</dt>
+                <dt class="bold">Exhibitions</dt>
+                <dd class="caption"><a routerLink="/exhibiciones/list">View Exhibitions</a></dd>
+                <dt>Artworks</dt>
                 <dd class="caption" *ngFor="let obra of museoDetail.artworks ">
                     <a routerLink="/artworks/{{ obra.id }} ">
                     {{ obra.name }}

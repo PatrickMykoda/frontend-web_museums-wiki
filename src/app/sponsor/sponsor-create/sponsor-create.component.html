@@ -1,55 +1,55 @@
 <div class="container mt-4">
-  <h2 class="text-center" i18n>Nuevo Patrocinador</h2>
+  <h2 class="text-center">New Sponsor</h2>
   <form [formGroup]="sponsorForm" (ngSubmit)="!sponsorForm.invalid && createSponsor(sponsorForm.value)">
       <!--Name-->
       <div class="form-group mx-sm-3 mb-2">
-          <label for="name" i18n>Nombre</label>
-          <input novalidate id="name" class="form-control" formControlName="name" i18n-placeholder placeholder="Nombre del patrocinador" />
+          <label for="name">Name</label>
+          <input novalidate id="name" class="form-control" formControlName="name" placeholder="Sponsor name" />
           <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         sponsorForm.get('name')!.hasError('required') &&
-        sponsorForm.get('name')!.touched" i18n>
-              Por favor ingrese el nombre del patrocinador!
+        sponsorForm.get('name')!.touched">
+              Please enter the sponsor name!
           </div>
-          <div class="alert alert-danger alert-dismissible fade show" *ngIf="sponsorForm.get('name')!.hasError('minlength')" i18n>
-              El nombre es demasiado corto!
+          <div class="alert alert-danger alert-dismissible fade show" *ngIf="sponsorForm.get('name')!.hasError('minlength')">
+              The name is too short!
           </div>
       </div>
 
       <!--Description-->
       <div class="form-group mx-sm-3 mb-2">
-          <label for="description" i18n>Descripción</label>
-          <input novalidate id="description" class="form-control" formControlName="description" i18n-placeholder placeholder="Descripción del patrocinador" />
+          <label for="description">Description</label>
+          <input novalidate id="description" class="form-control" formControlName="description" placeholder="Sponsor description" />
           <div class="alert alert-danger alert-dismissible fade show" *ngIf="
         sponsorForm.get('description')!.hasError('required') &&
         sponsorForm.get('description')!.touched
-      " i18n>
-              Descripción requerida
+      ">
+              Description required
           </div>
       </div>
 
       <!--Website-->
       <div class="form-group mx-sm-3 mb-2">
-          <label for="website" i18n>Página web del patrocinador</label>
-          <input novalidate id="website" class="form-control" formControlName="website" i18n-placeholder placeholder="Página web del patrocinador" />
+          <label for="website">Sponsor Website</label>
+          <input novalidate id="website" class="form-control" formControlName="website" placeholder="Sponsor website" />
           <div class="alert alert-danger alert-dismissible fade show" *ngIf="
           sponsorForm.get('website')!.hasError('required') &&
           sponsorForm.get('website')!.touched
-          " i18n>
-            Página web del patrocinador
+          ">
+            Sponsor website required
           </div>
           <div
        class="alert alert-danger alert-dismissible fade show"
        *ngIf="sponsorForm.get('website')!.hasError('pattern')"
-       i18n>
-       Ingrese página web válida
+       >
+       Enter a valid website
      </div>
    </div>
 
-      <button type="submit" class="btn btn-primary" [disabled]="!sponsorForm.valid" i18n>
-    Crear
+      <button type="submit" class="btn btn-primary" [disabled]="!sponsorForm.valid">
+    Create
   </button>
-      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()" i18n>
-    Cancelar
+      <button type="button" class="btn btn-danger ml-3" (click)="cancelCreation()">
+    Cancel
   </button>
   </form>
 </div>

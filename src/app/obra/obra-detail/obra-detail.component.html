@@ -4,13 +4,13 @@
         <div class="col">
             <dl>
                 <dd><img class="img-fluid" src="{{ obraDetail.mainImage }}" alt="{{ obraDetail.name }}" /></dd>
-                <dt i18n>Año</dt>
+                <dt>Year</dt>
                 <dd>{{ obraDetail.year }}</dd>
                 <hr />
-                <dt i18n>Tipo</dt>
+                <dt>Type</dt>
                 <dd>{{ obraDetail.type }}</dd>
                 <hr />
-                <dt class="bold" i18n>Artista</dt>
+                <dt class="bold">Artist</dt>
                 <dd class="caption">
                     <img class="profile-pic" alt="{{ obraDetail.artist.name }}" src="{{ obraDetail.artist.image }}" routerLink="/artists/{{ obraDetail.artist.id }}">
                 </dd>
@@ -20,9 +20,9 @@
                     </a>
                 </dd>
                 <hr />
-                <dt class="bold" i18n>Descripción</dt>
+                <dt class="bold">Description</dt>
                 <dd>{{ obraDetail.description }}</dd>
-                <dt i18n>Más imágenes</dt>
+                <dt>More Images</dt>
                 <dd class="img-fluid" *ngFor="let imagen of obraDetail.images">
                     <img class="img-fluid" src="{{ imagen.source }}" alt="{{ imagen.altText }}" />
                 </dd>

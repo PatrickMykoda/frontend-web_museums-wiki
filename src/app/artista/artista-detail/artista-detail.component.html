@@ -6,11 +6,11 @@
                 <dd>
                     <img class="img-fluid" src="{{ artistaDetail.image }}" alt="{{ artistaDetail.name }}" aria-label="fotografía del artista" />
                 </dd>
-                <dt class="bold" i18n>Lugar y fecha de nacimiento:</dt>
+                <dt class="bold">Place and date of birth:</dt>
                 <dd>{{artistaDetail.birthplace}}, {{artistaDetail.birthdate}}</dd>
-                <dt i18n>Movimientos</dt>
+                <dt>Movements</dt>
                 <dd class="caption" *ngFor="let movimiento of artistaDetail.movements ">{{ movimiento.name }}</dd>
-                <dt i18n>Obras</dt>
+                <dt>Artworks</dt>
                 <dd class="caption" *ngFor="let obra of artistaDetail.artworks ">
                     <a routerLink="/artworks/{{ obra.id }} ">
                     {{ obra.name }}
