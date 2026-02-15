@@ -10,11 +10,14 @@
             </div>
         </div>
         <div class="side-list">
+            <div class="side-list-title">
+                <p>Browse Museums</p>
+            </div>
+            <div (click)="browseMuseums()"class="side-list-hint side-list-hint-top">
+                <i class="fa-solid fa-caret-down animation-control"></i>
+            </div>
             <table class="" aria-describedby="museos">
                 <tbody>
-                    <tr class="side-list-hint">
-                        <p (click)="browseMuseums()">Browse Museums <i id="animation-icon" class="fa-solid fa-caret-right animation-control"></i></p>
-                    </tr>
                     <tr (click)="onSelected(museo)" *ngFor="let museo of museos; index as i">
                         <td>
                             <dd class="list-item" id='{{museo.id}}'><span class="list-item-text">{{museo.name}} <div class="list-item-info">{{museo.city}}</div></span></dd>
@@ -23,6 +26,9 @@
                     </tr>
                 </tbody>
             </table>
+            <div (click)="browseMuseums()"class="side-list-hint side-list-hint-bottom">
+                <i class="fa-solid fa-caret-up animation-control"></i>
+            </div>
         </div>
         <div class="item-name-and-description">
             <h1 class="item-name">{{selectedMuseo.name}}</h1>

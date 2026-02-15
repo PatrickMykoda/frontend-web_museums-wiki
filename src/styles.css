@@ -45,27 +45,6 @@ caption {
     background: linear-gradient(180deg, rgba(0,0,0,0.0.6) 0%, rgba(0,0,0,0) 100%);
 }
 
-.side-list-hint {
-    grid-column: 2;
-    grid-row: 1;
-    z-index: 2;
-    display: flex;
-    height: fit-content;
-    justify-content: center;
-    padding: 15px 30px;
-    color: black;
-    font-size: 2rem;
-    text-shadow: -1px 1px 0px #747db581;
-}
-
-.side-list-hint > p {
-    cursor: pointer;
-}
-
-.side-list-hint > p:hover > .animation-control {
-    animation: pulse-no-shadow 2s ease 0.2s infinite;
-}
-
 @keyframes pulse-no-shadow {
     0% {
         transform: scale(1.1);
@@ -80,11 +59,9 @@ caption {
     grid-column: 3;
     grid-row: 1;
     z-index: 1;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
     max-height: 465px;
-    overflow-y: scroll;
-    scrollbar-width: none; /* For Firefox */
     font-weight: 300;
     font-size: 1.3rem;
     color: black;
@@ -92,14 +69,67 @@ caption {
                 -1px 2px 0px #aaaec982;
 }
 
-.list-item-info {
-    display: inline;
-    font-size: 0.8rem;
-    text-shadow: none;
-    color: #555;
+.side-list-title {
+    grid-row: 1/3;
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    padding-top: 5px;
+    color: black;
+    font-size: 2rem;
+    text-shadow: -1px 1px 0px #747db581;
 }
 
-.side-list::-webkit-scrollbar {
+.side-list-hint {
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    padding: 5px 30px;
+    color: black;
+    font-size: 1.5rem;
+    text-shadow: -1px 1px 0px #747db581;
+    cursor: pointer;
+}
+
+.side-list-hint-top {
+    grid-row: 3;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.side-list-hint-bottom {
+    grid-row: 20;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.side-list-hint:hover > .animation-control {
+    animation: pulse-no-shadow 2s ease 0.2s infinite;
+}
+
+.side-list table {
+    grid-row: 4/20;
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none; /* For Firefox */
+    padding: 0px 10px;
+}
+
+.side-list table tbody {
+    display: block;
+    width: 100%;
+}
+
+.side-list table tr {
+    display: block;
+    width: 100%;
+}
+
+.side-list table td {
+    display: block;
+    width: 100%;
+}
+
+.side-list table::-webkit-scrollbar {
     display: none; /* For Chrome, Safari and Opera */
 }
 
@@ -132,6 +162,13 @@ caption {
     padding: 0;
     filter: drop-shadow(0 3px 3px #747db581);
     border-radius: 1px;
+}
+
+.list-item-info {
+    display: inline;
+    font-size: 0.8rem;
+    text-shadow: none;
+    color: #555;
 }
 
 .list-item:hover {
@@ -171,7 +208,7 @@ caption {
                 -2px 2px 0px #5560a5;
 }
 
-.selected-list-item > .list-item-info {
+.selected-list-item .list-item-info {
     color: #fff;
     text-shadow: none;
 }

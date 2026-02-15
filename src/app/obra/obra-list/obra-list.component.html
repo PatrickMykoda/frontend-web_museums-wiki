@@ -9,11 +9,14 @@
             </div>
         </div>
         <div class="side-list">
+            <div class="side-list-title">
+                <p>Browse Artworks</p>
+            </div>
+            <div (click)="browseArtworks()" class="side-list-hint side-list-hint-top">
+                <i class="fa-solid fa-caret-down animation-control"></i>
+            </div>
             <table class="" aria-describedby="artworks">
                 <tbody>
-                    <tr class="side-list-hint">
-                        <p (click)="browseArtworks()">Browse Artworks <i id="animation-icon" class="fa-solid fa-sort animation-control"></i></p>
-                    </tr>
                     <tr (click)="onSelected(artwork)" *ngFor="let artwork of artworks; index as i">
                         <td>
                             <dd class="list-item" id='{{artwork.id}}'><span class="list-item-text">{{artwork.name}} <div class="list-item-info">{{artwork.artist.name}}</div></span></dd>
@@ -22,6 +25,9 @@
                     </tr>
                 </tbody>
             </table>
+            <div (click)="browseArtworks()" class="side-list-hint side-list-hint-bottom">
+                <i class="fa-solid fa-caret-up animation-control"></i>
+            </div>
         </div>
         <div class="item-name-and-description">
             <h1 class="item-name">{{selectedArtwork.name}}</h1>
