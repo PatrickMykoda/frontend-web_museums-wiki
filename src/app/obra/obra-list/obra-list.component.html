@@ -1,28 +1,35 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-6">
-            <table class="table table-striped" aria-describedby="obras">
-                <thead>
-                    <caption id="obras">Artworks</caption>
-                    <tr>
-                        <th caption="col" id="thobra">#</th>
-                        <th caption="col" class="h4" id="thnombre">Name</th>
-                    </tr>
-                </thead>
+<div class="main-container">
+    <div class="list-container">
+        <div class="list-description">
+            <h1>Discover some of the most iconic artworks in the world</h1>
+        </div>
+        <div class="side-list-hint">
+            <p (click)="browseArtworks()">Browse Artworks <i id="animation-icon" class="fa-solid fa-caret-right animation-control"></i></p>
+        </div>
+        <div class="item-image">
+            <div>
+                <img src="{{selectedArtwork.mainImage}}"/>
+            </div>
+        </div>
+        <div class="side-list">
+            <table class="" aria-describedby="artworks">
                 <tbody>
-                    <tr (click)="onSelected(obra)" *ngFor="let obra of obras; index as i">
-                        <th scope="row">{{ i + 1 }}</th>
+                    <tr (click)="onSelected(artwork)" *ngFor="let artwork of artworks; index as i">
                         <td>
-                            <dd id="artwork names">{{obra.name}}</dd>
+                            <dd class="list-item" id='{{artwork.id}}'><span class="list-item-text">{{artwork.name}}, <div class="list-item-info">{{artwork.artist.name}}</div></span></dd>
+                            <div id='bottom-{{artwork.id}}' class="list-item-bottom"></div>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div class="col-6">
-            <div *ngIf="selected">
-                <app-obra-detail [obraDetail]="selectedObra"></app-obra-detail>
-            </div>
+        <div class="item-name-and-description">
+            <h1 class="item-name">{{selectedArtwork.name}}</h1>
+            <p class="item-description">{{selectedArtwork.description}}</p>
+        </div>
+        <div class="item-location">
+            <i class="fa-solid fa-location-dot test"></i>
+            <p class="test">{{selectedArtwork.artist.name}}</p>
         </div>
     </div>
 </div>

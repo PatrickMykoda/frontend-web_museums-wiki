@@ -95,6 +95,13 @@ caption {
                 -1px 2px 0px #aaaec982;
 }
 
+.list-item-info {
+    display: inline;
+    font-size: 0.8rem;
+    text-shadow: none;
+    color: #555;
+}
+
 .side-list::-webkit-scrollbar {
     display: none; /* For Chrome, Safari and Opera */
 }
@@ -165,6 +172,11 @@ caption {
     color: white;
     text-shadow: -1px 1px 0px #767fb7,
                 -2px 2px 0px #5560a5;
+}
+
+.selected-list-item > .list-item-info {
+    color: #fff;
+    text-shadow: none;
 }
 
 .selected-list-item:hover {

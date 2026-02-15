@@ -42,8 +42,8 @@ export class MuseoCreateComponent implements OnInit {
 
   createMuseo(museo: Museo){
     this.museoService.createMuseo(museo).subscribe(museo=>{
-    console.info("El museo ha sido creado: ", museo)
-    this.toastr.success("Confirmación", "Museo creado")
+    console.info("The museum has been created: ", museo)
+    this.toastr.success("Confirmation", "Museum created")
     this.museoForm.reset();
     this.router.navigate(['/museums', museo.id]);
     });
