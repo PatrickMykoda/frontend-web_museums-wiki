@@ -22,6 +22,7 @@ export class ObraListComponent implements OnInit {
     }
     this.selectedArtwork = artwork;
     document.getElementById(artwork.id.toString())?.classList.add('selected-list-item');
+    this.scrollToSelectedArtwork(artwork.id);
     clearInterval(this.intervalId);
     console.log(artwork.id);
   }
@@ -48,9 +49,10 @@ export class ObraListComponent implements OnInit {
     }
     this.selectedArtwork = this.artworks[0];
     document.getElementById(this.artworks[0].id.toString())?.classList.add('selected-list-item');
+    this.scrollToSelectedArtwork(this.artworks[0].id);
     let i = 1;
     this.intervalId = setInterval(() => {
-      if(i >= this.artworks.length-1 || i >= 7){
+      if(i >= this.artworks.length-1){
         clearInterval(this.intervalId);
       }
       if (this.selectedArtwork){
@@ -58,8 +60,22 @@ export class ObraListComponent implements OnInit {
       }
       this.selectedArtwork = this.artworks[i];
       document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
+      this.scrollToSelectedArtwork(this.artworks[i].id);
       i++;
     }, 1000);
+  }
+
+  scrollToSelectedArtwork(artworkId: number): void {
+    setTimeout(() => {
+      const selectedElement = document.getElementById(artworkId.toString());
+      if (selectedElement) {
+        selectedElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center',
+          inline: 'nearest'
+        });
+      }
+    }, 100);
   }
 
   ngOnInit() {
