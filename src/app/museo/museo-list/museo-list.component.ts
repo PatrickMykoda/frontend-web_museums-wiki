@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MuseoDetail } from '../museo-detail/museo-detail';
 import { MuseoService } from '../museo.service';
 
+interface ExtendedScrollIntoViewOptions extends ScrollIntoViewOptions {
+  container?: 'all' | 'nearest';
+}
+
 @Component({
   selector: 'app-museo-list',
   templateUrl: './museo-list.component.html',
@@ -13,8 +17,12 @@ export class MuseoListComponent implements OnInit {
   museos: Array<MuseoDetail> = [];
   selectedMuseo!: MuseoDetail;
   intervalId: any;
+  isPlaying: boolean = false;
 
   onSelected(museo: MuseoDetail): void {
+    if (this.isPlaying) {
+      this.stopPlaying();
+    } 
     if (this.selectedMuseo){
       document.getElementById(this.selectedMuseo.id.toString())?.classList.remove('selected-list-item');
     }
@@ -56,17 +64,25 @@ export class MuseoListComponent implements OnInit {
   }
 
   browseMuseums(){
-    clearInterval(this.intervalId);
-    if (this.selectedMuseo){
-      document.getElementById(this.selectedMuseo.id.toString())?.classList.remove('selected-list-item');
+    if (this.isPlaying) {
+      // Currently playing - pause it
+      this.stopPlaying();
+    } else {
+      // Currently paused - start playing
+      this.startPlaying();
     }
-    this.selectedMuseo = this.museos[0];
-    document.getElementById(this.museos[0].id.toString())?.classList.add('selected-list-item');
+  }
+
+  startPlaying() {
+    this.isPlaying = true;
+    clearInterval(this.intervalId);
+    document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
     this.setArtworkFrames();
-    let i = 1;
+    this.scrollToSelectedMuseum(this.selectedMuseo.id);
+    let i = this.museos.indexOf(this.selectedMuseo);
     this.intervalId = setInterval(() => {
-      if(i >= this.museos.length-1 || i >= 7){
-        clearInterval(this.intervalId);
+      if (i > this.museos.length-1){
+        i = 0;
       }
       if (this.selectedMuseo){
         document.getElementById(this.selectedMuseo.id.toString())?.classList.remove('selected-list-item');
@@ -76,6 +92,26 @@ export class MuseoListComponent implements OnInit {
       this.setArtworkFrames();
       i++;
     }, 1000);
+  }
+
+  stopPlaying() {
+    this.isPlaying = false;
+    clearInterval(this.intervalId);
+    document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
+  }
+
+  scrollToSelectedMuseum(museumId: number): void {
+    setTimeout(() => {
+      const selectedElement = document.getElementById(museumId.toString());
+      if (selectedElement) {
+        selectedElement.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center',
+          container: 'nearest',
+          inline: 'nearest'
+        } as ExtendedScrollIntoViewOptions);
+      }
+    }, 100);
   }
 
   ngOnInit() {

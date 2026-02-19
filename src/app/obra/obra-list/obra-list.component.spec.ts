@@ -34,7 +34,7 @@ describe('ObraListComponent', () => {
         faker.image.imageUrl(),
     )
 
-    component.obras = [
+    component.artworks = [
       new ObraDetail(
         faker.datatype.number(),
         faker.name.firstName(),

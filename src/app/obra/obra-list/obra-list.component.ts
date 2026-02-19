@@ -3,6 +3,10 @@ import { ObraService } from '../obra.service';
 import { ObraDetail } from '../obra-detail';
 import { MuseoDetail } from 'src/app/museo/museo-detail/museo-detail';
 
+interface ExtendedScrollIntoViewOptions extends ScrollIntoViewOptions {
+  container?: 'all' | 'nearest';
+}
+
 @Component({
   selector: 'app-obra-list',
   templateUrl: './obra-list.component.html',
@@ -15,8 +19,12 @@ export class ObraListComponent implements OnInit {
       artworks: Array<ObraDetail> = [];
       selectedArtwork!: ObraDetail;
       intervalId: any;
+      isPlaying: boolean = false;
 
   onSelected(artwork: ObraDetail): void {
+    if (this.isPlaying) {
+      this.stopPlaying();
+    }
     if (this.selectedArtwork){
       document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
     }
@@ -43,26 +51,39 @@ export class ObraListComponent implements OnInit {
   }
 
   browseArtworks(){
-    clearInterval(this.intervalId);
-    if (this.selectedArtwork){
-      document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
+    if (this.isPlaying) {
+      // Currently playing - pause it
+      this.stopPlaying();
+    } else {
+      // Currently paused - start playing
+      this.startPlaying();
     }
-    this.selectedArtwork = this.artworks[0];
-    document.getElementById(this.artworks[0].id.toString())?.classList.add('selected-list-item');
-    this.scrollToSelectedArtwork(this.artworks[0].id);
-    let i = 1;
-    this.intervalId = setInterval(() => {
-      if(i >= this.artworks.length-1){
-        clearInterval(this.intervalId);
-      }
-      if (this.selectedArtwork){
-        document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
-      }
-      this.selectedArtwork = this.artworks[i];
-      document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
-      this.scrollToSelectedArtwork(this.artworks[i].id);
-      i++;
-    }, 1000);
+  }
+
+  startPlaying() {
+    this.isPlaying = true;
+      clearInterval(this.intervalId);
+      document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
+      this.scrollToSelectedArtwork(this.selectedArtwork.id);
+      let i = this.artworks.indexOf(this.selectedArtwork);
+      this.intervalId = setInterval(() => {
+        if(i >= this.artworks.length-1){
+          i = 1;
+        }
+        if (this.selectedArtwork){
+          document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
+        }
+        this.selectedArtwork = this.artworks[i];
+        document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
+        this.scrollToSelectedArtwork(this.artworks[i].id);
+        i++;
+      }, 1000);
+  }
+
+  stopPlaying() {
+    this.isPlaying = false;
+    clearInterval(this.intervalId);
+    document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
   }
 
   scrollToSelectedArtwork(artworkId: number): void {
@@ -72,8 +93,9 @@ export class ObraListComponent implements OnInit {
         selectedElement.scrollIntoView({ 
           behavior: 'smooth', 
           block: 'center',
+          container: 'nearest',
           inline: 'nearest'
-        });
+        } as ExtendedScrollIntoViewOptions);
       }
     }, 100);
   }

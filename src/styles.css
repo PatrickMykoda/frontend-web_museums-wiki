@@ -55,6 +55,28 @@ caption {
     }
 }
 
+@keyframes pulse-simple {
+    0% {
+        transform: scale(1.1);
+    } 33% {
+        transform: scale(1.3);
+        filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.322));
+    } 100% {
+        transform: scale(1.0);
+    }
+}
+
+@keyframes pulse-rotated {
+    0% {
+        transform: rotate(0deg) scale(1.1);
+    } 33% {
+        transform: rotate(0deg) scale(1.3);
+        filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.322));
+    } 100% {
+        transform: rotate(0deg) scale(1.0);
+    }
+}
+
 .side-list {
     grid-column: 3;
     grid-row: 1;
@@ -70,7 +92,7 @@ caption {
 }
 
 .side-list-title {
-    grid-row: 1/3;
+    grid-row: 1/4;
     display: flex;
     height: fit-content;
     justify-content: center;
@@ -86,14 +108,18 @@ caption {
     justify-content: center;
     padding: 5px 30px;
     color: black;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     text-shadow: -1px 1px 0px #747db581;
     cursor: pointer;
 }
 
 .side-list-hint-top {
-    grid-row: 3;
+    grid-row: 4;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.side-list-hint-top > .fa-play {
+    transform: rotate(90deg);
 }
 
 .side-list-hint-bottom {
@@ -101,12 +127,20 @@ caption {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.side-list-hint:hover > .animation-control {
-    animation: pulse-no-shadow 2s ease 0.2s infinite;
+.side-list-hint-bottom > .fa-play {
+    transform: rotate(-90deg);
+}
+
+.side-list-hint:hover > .fa-play {
+    animation: pulse-rotated 2s ease 0.2s infinite;
+}
+
+.side-list-hint:hover > .fa-pause {
+    animation: pulse-simple 2s ease 0.2s infinite;
 }
 
 .side-list table {
-    grid-row: 4/20;
+    grid-row: 5/20;
     display: block;
     width: 100%;
     overflow-y: scroll;
@@ -882,6 +916,7 @@ caption {
 .animation-control {
     margin-right: 5px;
     border-radius: 50px;
+    transition: transform 0.3s ease;
 }
 
 .btn-animation:hover > .animation-control {
