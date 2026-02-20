@@ -264,13 +264,19 @@ caption {
 
 .item-location{
     grid-column: 3;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px 0 25px 0;
     background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 25%, rgba(255,255,255,1) 26%), url("https://live.staticflickr.com/6198/6052194802_97692440b6_b.jpg");
+}
+
+.item-location > .fa-location-dot {
+    font-size: 2.2rem;
+    filter: drop-shadow(6px -5px 2px rgba(0, 0, 0, 0.322));
+    padding-bottom: 15px;
 }
 
 .item-relations {
