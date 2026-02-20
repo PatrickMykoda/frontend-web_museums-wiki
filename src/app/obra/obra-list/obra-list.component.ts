@@ -62,22 +62,38 @@ export class ObraListComponent implements OnInit {
 
   startPlaying() {
     this.isPlaying = true;
-      clearInterval(this.intervalId);
-      document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
-      this.scrollToSelectedArtwork(this.selectedArtwork.id);
-      let i = this.artworks.indexOf(this.selectedArtwork);
-      this.intervalId = setInterval(() => {
-        if(i >= this.artworks.length-1){
-          i = 1;
-        }
-        if (this.selectedArtwork){
-          document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
-        }
-        this.selectedArtwork = this.artworks[i];
-        document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
-        this.scrollToSelectedArtwork(this.artworks[i].id);
-        i++;
-      }, 1000);
+    clearInterval(this.intervalId);
+    document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
+    
+    // Set initial index based on current selection - start from next artwork
+    let i = this.artworks.indexOf(this.selectedArtwork);
+    if(i >= this.artworks.length){
+      i = 0;
+    } else {
+      i++;
+    }
+    
+    if (this.selectedArtwork){
+      document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
+    }
+    this.selectedArtwork = this.artworks[i];
+    document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
+    this.scrollToSelectedArtwork(this.artworks[i].id);
+    i++;
+    
+    // Continue with interval for subsequent transitions
+    this.intervalId = setInterval(() => {
+      if(i >= this.artworks.length){
+        i = 0;
+      }
+      if (this.selectedArtwork){
+        document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
+      }
+      this.selectedArtwork = this.artworks[i];
+      document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
+      this.scrollToSelectedArtwork(this.artworks[i].id);
+      i++;
+    }, 1000);
   }
 
   stopPlaying() {

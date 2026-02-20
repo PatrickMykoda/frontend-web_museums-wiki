@@ -77,11 +77,28 @@ export class MuseoListComponent implements OnInit {
     this.isPlaying = true;
     clearInterval(this.intervalId);
     document.querySelectorAll('.fa-play, .fa-pause').forEach(el => el.classList.toggle('hide'));
+    
+    // Set initial index based on current selection - start from next museum
+    let i = this.museos.indexOf(this.selectedMuseo);
+    if (i >= this.museos.length){
+        i = 0;
+      } else {
+        i++;
+      }
+
+    // Execute first transition immediately
+    if (this.selectedMuseo){
+        document.getElementById(this.selectedMuseo.id.toString())?.classList.remove('selected-list-item');
+    }
+    this.selectedMuseo = this.museos[i];
+    document.getElementById(this.museos[i].id.toString())?.classList.add('selected-list-item');
     this.setArtworkFrames();
     this.scrollToSelectedMuseum(this.selectedMuseo.id);
-    let i = this.museos.indexOf(this.selectedMuseo);
+    i ++;
+
+    // Continue with interval for subsequent transitions
     this.intervalId = setInterval(() => {
-      if (i > this.museos.length-1){
+      if (i >= this.museos.length){
         i = 0;
       }
       if (this.selectedMuseo){
