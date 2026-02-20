@@ -1,3 +1,11 @@
 caption {
   background-color: #2C3888;
 }
+
+.artist-item, .museum-item {
+  padding-right: 50px;
+}
+.artist-image, .museum-image {
+  max-width: 350px;
+  max-height: 350px;
+}

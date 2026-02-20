@@ -20,6 +20,8 @@ export class ObraListComponent implements OnInit {
       selectedArtwork!: ObraDetail;
       intervalId: any;
       isPlaying: boolean = false;
+      ArtistFrameNum: number = 0;
+      MuseumFrameNum: number = 0;
 
   onSelected(artwork: ObraDetail): void {
     if (this.isPlaying) {
@@ -30,6 +32,7 @@ export class ObraListComponent implements OnInit {
     }
     this.selectedArtwork = artwork;
     document.getElementById(artwork.id.toString())?.classList.add('selected-list-item');
+    this.setFrames();
     this.scrollToSelectedArtwork(artwork.id);
     clearInterval(this.intervalId);
     console.log(artwork.id);
@@ -48,6 +51,29 @@ export class ObraListComponent implements OnInit {
   hoverEffect(id: number) {
     document.getElementById(id.toString())?.classList.add('list-item-hovered');
     document.getElementById("bottom-"+id.toString())?.classList.add('item-bottom-hovered');
+  }
+
+  setFrames(){
+    setTimeout(() => {
+      console.log("Setting artist frame...");
+      let artistFrame = document.getElementById('artwork-detail-artist-frame');
+      artistFrame?.classList.remove('frame'+this.ArtistFrameNum.toString());
+      let randomNum = Math.floor(Math.random() * 9) + 1;
+      this.ArtistFrameNum = randomNum;
+      artistFrame?.classList.add('frame'+randomNum.toString());
+      console.log("Artist frame classes:", artistFrame?.classList);
+
+      console.log("Setting museum frame...");
+      let museumFrame = document.getElementById('artwork-detail-museum-frame');
+      museumFrame?.classList.remove('frame'+this.MuseumFrameNum.toString());
+      randomNum = Math.floor(Math.random() * 9) + 1;
+      while (randomNum === this.ArtistFrameNum){
+        randomNum = Math.floor(Math.random() * 9) + 1; 
+      };
+      this.MuseumFrameNum = randomNum;
+      museumFrame?.classList.add('frame'+randomNum.toString());
+      console.log("Museum frame classes:", museumFrame?.classList);
+    }, 50);
   }
 
   browseArtworks(){
@@ -72,12 +98,13 @@ export class ObraListComponent implements OnInit {
     } else {
       i++;
     }
-    
+
     if (this.selectedArtwork){
       document.getElementById(this.selectedArtwork.id.toString())?.classList.remove('selected-list-item');
     }
     this.selectedArtwork = this.artworks[i];
     document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
+    this.setFrames();
     this.scrollToSelectedArtwork(this.artworks[i].id);
     i++;
     
@@ -91,6 +118,7 @@ export class ObraListComponent implements OnInit {
       }
       this.selectedArtwork = this.artworks[i];
       document.getElementById(this.artworks[i].id.toString())?.classList.add('selected-list-item');
+      this.setFrames();
       this.scrollToSelectedArtwork(this.artworks[i].id);
       i++;
     }, 1000);

@@ -34,10 +34,31 @@
         <div class="item-name-and-description">
             <h1 class="item-name">{{selectedArtwork.name}}</h1>
             <p class="item-description">{{selectedArtwork.description}}</p>
+            <a class="item-detail-link" routerLink="/artworks/{{selectedArtwork.id}}"><i class="fa-solid fa-eye"></i>See details</a>
         </div>
         <div class="item-location">
             <i class="fa-solid fa-location-dot test"></i>
-            <p class="test">{{selectedArtwork.museum.name}}</p>
+            <p class="test">{{selectedArtwork.museum.city}}</p>
+        </div>
+        <div class="item-relations">
+            <h1 id="relation-description">Artist</h1>
+            <div class="relation-item artist-item" routerLink="/artists/{{selectedArtwork.artist.id}}">
+                <div id="artwork-detail-artist-frame" class="list-image-frame">
+                    <img src="{{selectedArtwork.artist.image}}" alt="{{selectedArtwork.artist.name}}" class="list-pic artist-image"/>
+                </div>
+                <div class="list-image-titel">
+                    <h4>{{ selectedArtwork.artist.name }}</h4>
+                </div>
+            </div>
+            <h1 id="relation-description">Museum</h1>
+            <div class="relation-item museum-item" routerLink="/museums/{{selectedArtwork.museum.id}}">
+                <div id="artwork-detail-museum-frame" class="list-image-frame">
+                    <img src="{{selectedArtwork.museum.image}}" alt="{{selectedArtwork.museum.name}}" class="list-pic museum-image"/>
+                </div>
+                <div class="list-image-titel">
+                    <h4>{{ selectedArtwork.museum.name }}</h4>
+                </div>
+            </div>
         </div>
     </div>
 </div>
